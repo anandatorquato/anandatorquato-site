@@ -3,213 +3,334 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ananda Torquato · Sites, robôs de WhatsApp e tráfego pago | Porto Seguro</title>
+<title>Ananda Torquato · Sites, robôs de WhatsApp e tráfego pago</title>
 <meta name="description" content="Sites profissionais, robôs de WhatsApp com IA e tráfego pago para negócios locais. A Máquina de Clientes do seu negócio. Peça a prévia grátis do seu site.">
 <link rel="canonical" href="https://anandatorquato.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://anandatorquato.com/">
-<meta property="og:title" content="Seu negócio vendendo no Google e no WhatsApp. Até de madrugada.">
+<meta property="og:title" content="Mais clientes para o seu negócio, no Google e no WhatsApp.">
 <meta property="og:description" content="Sites, robôs de WhatsApp com IA e tráfego pago. Peça a prévia grátis do seu site.">
 <meta property="og:image" content="https://anandatorquato.com/assets/og.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#09090B">
+<meta name="theme-color" content="#060607">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=Geist+Mono:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
 <style>
-body{margin:0;background:#09090B}
+body{margin:0;background:#060607}
 html{scroll-behavior:smooth}
 a{color:#22C55E}a:hover{color:#4ADE80}
-.h{font-family:'Bricolage Grotesque','Inter',system-ui,sans-serif;letter-spacing:-0.02em}
-.btn{transition:transform .2s ease, box-shadow .2s ease, background .2s ease}
-.btn:hover{transform:translateY(-2px)}
-.btn-y:hover{box-shadow:0 10px 30px rgba(250,204,21,.25);color:#09090B}
-.btn-o:hover{background:#18181B;color:#FAFAFA}
-.card{transition:transform .25s ease, border-color .25s ease}
-.card:hover{transform:translateY(-4px);border-color:#22C55E}
-.tab{cursor:pointer;transition:background .2s ease,color .2s ease}
-.tab:hover{color:#FAFAFA}
-details summary{list-style:none;cursor:pointer}
-details summary::-webkit-details-marker{display:none}
-details[open] .plus{transform:rotate(45deg)}
-.plus{transition:transform .25s ease}
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+.h{font-family:'Bricolage Grotesque','Inter',system-ui,sans-serif;letter-spacing:-.03em}
+.m{font-family:'Geist Mono',ui-monospace,monospace;text-transform:uppercase;letter-spacing:.14em}
+.btn{transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-3px) scale(1.02)}
+.btn-y:hover{box-shadow:0 14px 40px rgba(250,204,21,.3);color:#09090B}
+.btn-o:hover{background:rgba(250,250,250,.08);color:#FAFAFA}
+.card{transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s}
+.card:hover{transform:translateY(-6px);border-color:rgba(34,197,94,.6)}
+.tilt{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .tilt{transform:perspective(900px) rotateX(4deg) rotateY(-5deg) scale(1.03)}
+.navl{color:#A1A1AA;text-decoration:none;transition:color .2s}.navl:hover{color:#FAFAFA}
+.tabc{cursor:pointer;transition:background .25s,color .25s}
+details summary{list-style:none;cursor:pointer}details summary::-webkit-details-marker{display:none}
+details[open] .plus{transform:rotate(45deg)}.plus{transition:transform .25s}
+.pill{transition:background .3s,border-color .3s,transform .3s}.pill:hover{background:rgba(250,250,250,.1);border-color:rgba(250,250,250,.25);transform:translateY(-2px);color:#FAFAFA}
 
 @keyframes up{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
-@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes orb{0%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,-40px) scale(1.15)}100%{transform:translate(-40px,30px) scale(.95)}}
+@keyframes rot{0.00%,5.67%{transform:translateY(-0.0000%)}8.33%,14.00%{transform:translateY(-7.6923%)}16.67%,22.33%{transform:translateY(-15.3846%)}25.00%,30.67%{transform:translateY(-23.0769%)}33.33%,39.00%{transform:translateY(-30.7692%)}41.67%,47.33%{transform:translateY(-38.4615%)}50.00%,55.67%{transform:translateY(-46.1538%)}58.33%,64.00%{transform:translateY(-53.8462%)}66.67%,72.33%{transform:translateY(-61.5385%)}75.00%,80.67%{transform:translateY(-69.2308%)}83.33%,89.00%{transform:translateY(-76.9231%)}91.67%,97.33%{transform:translateY(-84.6154%)}100%{transform:translateY(-92.3077%)}}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes mqr{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes viaja{0%{left:0;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}100%{box-shadow:0 0 0 14px rgba(34,197,94,0)}}
+@keyframes pulsey{0%{box-shadow:0 0 0 0 rgba(250,204,21,.6)}100%{box-shadow:0 0 0 14px rgba(250,204,21,0)}}
 @keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}100%{box-shadow:0 0 0 12px rgba(34,197,94,0)}}
-@keyframes rv{from{opacity:0;transform:translateY(56px) scale(.97)}to{opacity:1;transform:none}}
-@keyframes rvx{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:none}}
-@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes b1{0%,4%{opacity:0;transform:translateY(10px)}8%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes b2{0%,22%{opacity:0;transform:translateY(10px)}26%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes b3{0%,42%{opacity:0;transform:translateY(10px)}46%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes b4{0%,62%{opacity:0;transform:translateY(10px)}66%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes notif{0%,60%{opacity:0;transform:translateY(-16px) scale(.94)}66%{opacity:1;transform:translateY(4px) scale(1.02)}70%,94%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-8px)}}
+@keyframes cursor{0%{transform:translate(0,0)}40%{transform:translate(70px,54px)}50%{transform:translate(70px,54px) scale(.8)}60%,100%{transform:translate(70px,54px)}}
+@keyframes gira{to{--ang:360deg}}
+@keyframes rv{from{opacity:0;transform:translateY(60px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes cresce{from{transform:scaleY(.08)}to{transform:scaleY(1)}}
 @keyframes fillt{to{background-position:0 0}}
-@keyframes zoomin{from{transform:scale(.86);opacity:.4}to{transform:scale(1);opacity:1}}
+@keyframes respira{from{transform:translate(-50%,-50%) scale(1);opacity:.6}to{transform:translate(-50%,-50%) scale(1.12);opacity:1}}
 
 .up{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
-.pop{animation:pop .5s cubic-bezier(.2,.7,.2,1) both}
-.float{animation:float 6s ease-in-out infinite}
-.mq{animation:mq 32s linear infinite}
+.orb{animation:orb 14s ease-in-out infinite alternate}
+.rot{animation:rot 13.2s cubic-bezier(.7,0,.2,1) infinite}
+.mq{animation:mq 36s linear infinite}.mqr{animation:mqr 42s linear infinite}
 .dot{animation:blink 1.2s infinite}
-.live{animation:pulse 1.6s infinite}
-
+.live{animation:pulse 1.6s infinite}.livey{animation:pulsey 1.6s infinite}
+.borda{background:conic-gradient(from var(--ang),#22C55E,#FACC15,#22C55E 40%,rgba(34,197,94,.15) 60%,#22C55E);animation:gira 5s linear infinite}
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.s2{grid-column:span 2}.s3{grid-column:span 3}.s4{grid-column:span 4}
+.maq{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.linha{display:block}
+@media (max-width:980px){.s2,.s3,.s4{grid-column:span 6}.maq{grid-template-columns:repeat(2,minmax(0,1fr))}.linha{display:none}}
+@media (max-width:620px){.maq{grid-template-columns:minmax(0,1fr)}.navlinks{display:none !important}.wa-rot{display:none}}
 @supports (animation-timeline: view()){
   .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
-  .rvx{animation:rvx linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
-  .zoom{animation:zoomin linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
-  .prog{animation:grow linear both;animation-timeline:scroll(root)}
-  .fill{background:linear-gradient(90deg,#FACC15 50%,#3F3F46 50%);background-size:200% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:fillt linear both;animation-timeline:view();animation-range:cover 15% cover 55%}
+  .bar{animation:cresce linear both;animation-timeline:view();animation-range:entry 10% entry 100%}
+  .fill{background:linear-gradient(90deg,#FAFAFA 50%,#2E2E33 50%);background-size:200% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:fillt linear both;animation-timeline:view();animation-range:entry 40% cover 45%}
 }
-@media (prefers-reduced-motion: reduce){
-  .up,.pop,.float,.mq,.rv,.rvx,.zoom,.dot,.live{animation:none !important;opacity:1 !important;transform:none !important}
-}
+@media (prefers-reduced-motion: reduce){.up,.orb,.rot,.mq,.mqr,.dot,.live,.livey,.borda,.rv,.bar,.fill,.loop{animation:none !important;opacity:1 !important;transform:none !important}}
 </style>
-
-<style>@media (max-width:720px){header nav{display:none}}.tab:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid #FACC15;outline-offset:2px}
-.wa-float{position:fixed;right:20px;bottom:20px;bottom:calc(20px + env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:10px;text-decoration:none}
-.wa-float .bolha{width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.45);transition:transform .2s ease}
-.wa-float:hover .bolha{transform:scale(1.07)}
-.wa-float .rotulo{background:#FAFAFA;color:#09090B;font:600 14px Inter,system-ui,sans-serif;padding:9px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);white-space:nowrap}
-.wa-float .bolha::after{content:"";position:absolute;width:60px;height:60px;border-radius:50%;animation:pulse 2s infinite}
-@media (max-width:720px){.wa-float .rotulo{display:none}}
-@media (prefers-reduced-motion: reduce){.wa-float .bolha::after{animation:none}}
-
-/* ===== rodapé cinematográfico ===== */
-.rp-cortina{position:relative;height:100vh;height:100svh;width:100%;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);view-timeline-name:--rodape}
-.rp{position:fixed;left:0;bottom:0;width:100%;height:100vh;height:100svh;overflow:hidden;background:#060607;color:#FAFAFA;display:flex;flex-direction:column;justify-content:space-between}
-.rp-aurora{position:absolute;left:50%;top:50%;width:80vw;height:60vh;border-radius:50%;filter:blur(90px);background:radial-gradient(circle at 50% 50%,rgba(34,197,94,.18) 0%,rgba(250,204,21,.12) 40%,transparent 70%);transform:translate(-50%,-50%);animation:rp-respira 8s ease-in-out infinite alternate;pointer-events:none}
-@keyframes rp-respira{from{transform:translate(-50%,-50%) scale(1);opacity:.6}to{transform:translate(-50%,-50%) scale(1.1);opacity:1}}
-.rp-grade{position:absolute;inset:0;pointer-events:none;background-size:60px 60px;background-image:linear-gradient(to right,rgba(250,250,250,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(250,250,250,.035) 1px,transparent 1px);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent)}
-.rp-gigante{position:absolute;left:50%;bottom:-5vh;transform:translateX(-50%);font-family:'Bricolage Grotesque',Inter,sans-serif;font-weight:800;font-size:30vw;line-height:.75;letter-spacing:-.06em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(250,250,250,.07);background:linear-gradient(180deg,rgba(250,250,250,.12) 0%,transparent 60%);-webkit-background-clip:text;background-clip:text;pointer-events:none;user-select:none}
-.rp-faixa{position:absolute;top:48px;left:-5%;width:110%;overflow:hidden;transform:rotate(-2deg);border-top:1px solid rgba(250,250,250,.1);border-bottom:1px solid rgba(250,250,250,.1);background:rgba(9,9,11,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:16px 0;z-index:2;box-shadow:0 20px 40px rgba(0,0,0,.5)}
-.rp-faixa-trilho{display:flex;width:max-content;animation:mq 40s linear infinite}
-.rp-marq-item{display:flex;align-items:center;gap:40px;padding:0 20px;font:700 14px Inter,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#A1A1AA;white-space:nowrap}
-.rp-marq-item .am{color:#FACC15}.rp-marq-item .vd{color:#22C55E}
-.rp-centro{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 24px 0;width:100%;max-width:1000px;margin:0 auto;box-sizing:border-box}
-.rp-titulo{margin:0 0 44px;text-align:center;font-weight:800;font-size:clamp(46px,8vw,104px);line-height:.95;letter-spacing:-.045em;background:linear-gradient(180deg,#FAFAFA 0%,rgba(250,250,250,.45) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 22px rgba(250,250,250,.12))}
-.rp-links{display:flex;flex-direction:column;align-items:center;gap:22px;width:100%}
-.rp-linha{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;width:100%}
-.rp-pill{box-sizing:border-box;display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#FAFAFA;border-radius:999px;background:linear-gradient(145deg,rgba(250,250,250,.06) 0%,rgba(250,250,250,.015) 100%);border:1px solid rgba(250,250,250,.1);box-shadow:0 10px 30px -10px rgba(0,0,0,.6),inset 0 1px 1px rgba(250,250,250,.1);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:background .4s,border-color .4s,box-shadow .4s;will-change:transform}
-.rp-pill:hover{background:linear-gradient(145deg,rgba(250,250,250,.12) 0%,rgba(250,250,250,.03) 100%);border-color:rgba(250,250,250,.22);color:#FAFAFA}
-.rp-grande{padding:18px 32px;font:600 17px Inter,sans-serif;min-height:56px}
-.rp-grande svg{color:#A1A1AA;transition:color .3s}.rp-grande:hover svg{color:#FAFAFA}
-.rp-wa{border-color:rgba(34,197,94,.45)}.rp-wa svg{color:#22C55E}.rp-wa:hover{border-color:#22C55E}.rp-wa:hover svg{color:#22C55E}
-.rp-wa b{color:#FACC15;font-weight:700}
-.rp-peq{padding:11px 22px;font:500 14px Inter,sans-serif;color:#A1A1AA;min-height:44px}
-.rp-base{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 48px 32px;flex-wrap:wrap}
-.rp-copy{font:600 12px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#71717A}
-.rp-selo{padding:10px 20px;gap:8px;font:700 12px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#A1A1AA;cursor:default}
-.rp-selo b{color:#FAFAFA;letter-spacing:.04em}
-.rp-coracao{animation:rp-bate 2s cubic-bezier(.25,1,.5,1) infinite}
-@keyframes rp-bate{0%,100%{transform:scale(1)}15%,45%{transform:scale(1.25)}30%{transform:scale(1)}}
-.rp-topo{width:48px;height:48px;justify-content:center;padding:0;color:#A1A1AA;cursor:pointer;font:inherit}
-.rp-topo svg{transition:transform .3s}.rp-topo:hover svg{transform:translateY(-4px)}
-@supports (animation-timeline: view()){
-  .rp-gigante{animation:rp-gig linear both;animation-timeline:--rodape;animation-range:entry 0% entry 100%}
-  .rp-titulo,.rp-links{animation:rp-sobe linear both;animation-timeline:--rodape;animation-range:entry 35% entry 100%}
-  .rp-links{animation-range:entry 45% entry 100%}
-}
-@keyframes rp-gig{from{transform:translateX(-50%) translateY(10vh) scale(.8);opacity:0}to{transform:translateX(-50%) translateY(0) scale(1);opacity:1}}
-@keyframes rp-sobe{from{transform:translateY(50px);opacity:0}to{transform:none;opacity:1}}
-body.rp-visivel .wa-float{opacity:0;pointer-events:none;transform:translateY(20px)}
-.wa-float{transition:opacity .3s,transform .3s}
-@media (max-width:720px){
-  .rp-faixa{top:28px;padding:12px 0}.rp-marq-item{font-size:11px;gap:28px}
-  .rp-centro{padding-top:90px}.rp-titulo{margin-bottom:30px}
-  .rp-grande{width:100%;justify-content:center;padding:16px 20px;font-size:16px}
-  .rp-linha:not(.rp-sec){flex-direction:column;align-items:stretch;max-width:340px}
-  .rp-peq{padding:10px 16px;font-size:13px}
-  .rp-base{flex-direction:column;justify-content:center;padding:0 20px 24px;gap:12px}
-  .rp-copy{order:2;font-size:10px;text-align:center}.rp-selo{order:1}.rp-topo{display:none}
-}
-@media (prefers-reduced-motion: reduce){.rp-aurora,.rp-faixa-trilho,.rp-coracao,.rp-gigante,.rp-titulo,.rp-links{animation:none !important;opacity:1 !important}}
-</style>
+<style>.tabc:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid #FACC15;outline-offset:3px}</style>
 </head>
 <body>
 
+<div id="topo" style="background:#060607;color:#FAFAFA;font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:clip;position:relative">
 
-<div style="background:#09090B;color:#FAFAFA;font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden">
-
-<!-- NAV -->
-<header style="position:sticky;top:0;z-index:40;background:rgba(9,9,11,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #1F1F23">
-  <div style="max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-    <a href="#topo" class="h" style="display:flex;align-items:center;gap:10px;color:#FAFAFA;text-decoration:none;font-weight:800;font-size:22px">
-      <span aria-hidden="true" style="width:34px;height:34px;border-radius:10px;background:#22C55E;display:grid;place-items:center">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#09090B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l8-4 8 4-8 4-8-4z"></path><path d="M4 12l8 4 8-4"></path><path d="M4 17l8 4 8-4"></path></svg>
-      </span>
-      <span>ananda<span style="color:#FACC15">.</span>sites</span>
-    </a>
-    <nav aria-label="Principal" style="display:flex;gap:28px;flex-wrap:wrap;font-size:15px;font-weight:500">
-      <a href="#projetos" style="color:#A1A1AA;text-decoration:none">Projetos</a>
-      <a href="#robo" style="color:#A1A1AA;text-decoration:none">Robô de WhatsApp</a>
-      <a href="#pacotes" style="color:#A1A1AA;text-decoration:none">Pacotes</a>
-      <a href="#duvidas" style="color:#A1A1AA;text-decoration:none">Dúvidas</a>
+<!-- NAV flutuante -->
+<header style="position:sticky;top:16px;z-index:40;display:flex;justify-content:center;padding:0 16px;height:0">
+  <div style="display:flex;align-items:center;gap:26px;background:rgba(16,16,18,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(250,250,250,.1);border-radius:999px;padding:8px 8px 8px 20px;box-shadow:0 20px 50px rgba(0,0,0,.5);height:max-content">
+    <a href="#topo" class="h" style="color:#FAFAFA;text-decoration:none;font-weight:800;font-size:19px;white-space:nowrap">ananda<span style="color:#FACC15">.</span>sites</a>
+    <nav class="navlinks" aria-label="Principal" style="display:flex;gap:22px;font-size:14px;font-weight:500">
+      <a class="navl" href="#maquina">A máquina</a><a class="navl" href="#projetos">Projetos</a><a class="navl" href="#pacotes">Pacotes</a><a class="navl" href="#duvidas">Dúvidas</a>
     </nav>
-    <a href="#contato" data-wa="Oi, Ananda! Quero a prévia grátis do site do meu negócio." class="btn btn-y" style="background:#FACC15;color:#09090B;text-decoration:none;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center">Pedir prévia grátis</a>
+    <a href="https://wa.me/557336791767?text=Oi%2C%20Ananda%21%20Quero%20a%20pr%C3%A9via%20gr%C3%A1tis%20do%20site%20do%20meu%20neg%C3%B3cio." class="btn btn-y" style="background:#FACC15;color:#09090B;text-decoration:none;font-weight:700;font-size:14px;padding:11px 18px;border-radius:999px;white-space:nowrap;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center">Prévia grátis</a>
   </div>
 </header>
 
 <!-- HERO -->
-<section id="topo" style="position:relative;padding:88px 24px 72px;background-image:linear-gradient(#18181B 1px,transparent 1px),linear-gradient(90deg,#18181B 1px,transparent 1px);background-size:56px 56px;background-position:center top">
-  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:56px;align-items:center">
-    <div style="flex:1 1 520px;min-width:0">
-      <div class="up" style="display:inline-flex;align-items:center;gap:10px;border:1px solid #27272A;background:#121214;border-radius:999px;padding:8px 16px;font-size:14px;color:#D4D4D8">
-        <span class="live" style="width:9px;height:9px;border-radius:50%;background:#22C55E"></span>
-        Sites, robôs de WhatsApp com IA e tráfego pago
+<section style="position:relative;padding:150px 24px 60px;text-align:center">
+  <div aria-hidden="true" style="position:absolute;inset:0;background-image:linear-gradient(rgba(250,250,250,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(250,250,250,.04) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%)"></div>
+  <div class="orb" aria-hidden="true" style="position:absolute;left:12%;top:80px;width:420px;height:420px;border-radius:50%;background:rgba(34,197,94,.16);filter:blur(100px)"></div>
+  <div class="orb" aria-hidden="true" style="position:absolute;right:10%;top:200px;width:380px;height:380px;border-radius:50%;background:rgba(250,204,21,.11);filter:blur(100px);animation-delay:-6s"></div>
+  <div style="position:relative;max-width:1100px;margin:0 auto">
+    <div class="up" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(250,250,250,.12);background:rgba(16,16,18,.7);border-radius:999px;padding:8px 16px;font-size:14px;color:#D4D4D8">
+      <span class="live" style="width:9px;height:9px;border-radius:50%;background:#22C55E"></span>Sites, robôs de WhatsApp com IA e tráfego pago
+    </div>
+    <h1 class="h up" style="margin:26px 0 0;font-size:clamp(54px,9.4vw,140px);line-height:.95;font-weight:800;letter-spacing:-.055em;animation-delay:.1s">
+      Mais clientes para
+      <span style="display:block;height:1em;overflow:hidden;color:#FACC15;padding-bottom:.12em">
+        <span class="rot" style="display:flex;flex-direction:column;height:1300%"><span style="flex:1;line-height:1;white-space:nowrap">pousadas.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">restaurantes.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">clínicas.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">salões.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">lojas.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">academias.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">imobiliárias.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">dentistas.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">barbearias.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">pet shops.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">hotéis.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">advogados.</span><span style="flex:1;line-height:1;white-space:nowrap" aria-hidden="true">pousadas.</span></span>
+      </span>
+    </h1>
+    <p class="up" style="margin:26px auto 0;font-size:21px;color:#A1A1AA;max-width:680px;animation-delay:.25s">Eu monto a <b style="color:#FAFAFA">Máquina de Clientes</b> do seu negócio: o anúncio traz, o site convence e o robô atende na hora. Você só entra pra fechar.</p>
+    <div class="up" style="margin-top:38px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation-delay:.4s">
+      <a href="https://wa.me/557336791767?text=Oi%2C%20Ananda%21%20Quero%20a%20pr%C3%A9via%20gr%C3%A1tis%20do%20site%20do%20meu%20neg%C3%B3cio." class="btn btn-y" style="background:#FACC15;color:#09090B;text-decoration:none;font-weight:700;font-size:18px;padding:19px 30px;border-radius:16px;display:inline-flex;align-items:center;gap:10px">Quero minha prévia grátis <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+      <a href="#maquina" class="btn btn-o" style="border:1px solid #3F3F46;color:#FAFAFA;text-decoration:none;font-weight:600;font-size:18px;padding:19px 30px;border-radius:16px">Ver a máquina funcionando</a>
+    </div>
+  </div>
+</section>
+
+<!-- A MÁQUINA -->
+<section id="maquina" style="padding:60px 24px 120px">
+  <div style="max-width:1240px;margin:0 auto;position:relative">
+    <div class="linha" aria-hidden="true" style="position:absolute;left:6%;right:6%;top:125px;height:2px;background:repeating-linear-gradient(90deg,#3F3F46 0 8px,transparent 8px 16px)">
+      <span class="loop" style="position:absolute;top:-5px;width:12px;height:12px;border-radius:50%;background:#FACC15;box-shadow:0 0 16px #FACC15;animation:viaja 5s linear infinite"></span>
+      <span class="loop" style="position:absolute;top:-5px;width:12px;height:12px;border-radius:50%;background:#22C55E;box-shadow:0 0 16px #22C55E;animation:viaja 5s linear infinite;animation-delay:-2.5s"></span>
+    </div>
+    <div class="maq"><div class="rv" style="position:relative;z-index:1">
+  <div class="card" style="background:#101012;border:1px solid #27272A;border-radius:22px;padding:16px;height:250px;box-sizing:border-box;overflow:hidden;position:relative"><div style="font-size:11px;color:#71717A;display:flex;align-items:center;gap:8px"><span style="width:22px;height:22px;border-radius:50%;background:#22C55E"></span><span><b style="color:#FAFAFA">pousadamarealta</b> · Patrocinado</span></div>
+<div style="margin-top:10px;height:104px;border-radius:12px;background:repeating-linear-gradient(135deg,#17331f 0 14px,#1d4027 14px 28px);display:grid;place-items:center;color:#86EFAC;font-size:12px" class="m">foto da pousada</div>
+<div style="margin-top:10px;font-size:13px;color:#D4D4D8">Verão em Porto Seguro? Reserve direto e economize.</div>
+<div class="livey" style="margin-top:10px;display:inline-block;background:#FACC15;color:#09090B;font-weight:700;font-size:12px;padding:7px 12px;border-radius:8px">Saiba mais</div></div>
+  <div style="margin-top:16px;display:flex;align-items:center;gap:10px"><span class="m" style="font-size:12px;font-weight:700;color:#09090B;background:#22C55E;border-radius:6px;padding:3px 7px">01</span><span class="h" style="font-size:22px;font-weight:800">Anúncio</span></div>
+  <p style="margin:6px 0 0;color:#A1A1AA;font-size:15px;line-height:1.5">O negócio aparece no Instagram de quem está procurando.</p>
+</div><div class="rv" style="position:relative;z-index:1">
+  <div class="card" style="background:#101012;border:1px solid #27272A;border-radius:22px;padding:16px;height:250px;box-sizing:border-box;overflow:hidden;position:relative"><div style="display:flex;gap:6px;margin-bottom:10px"><span style="width:9px;height:9px;border-radius:50%;background:#3F3F46"></span><span style="width:9px;height:9px;border-radius:50%;background:#3F3F46"></span><span style="width:9px;height:9px;border-radius:50%;background:#3F3F46"></span><span style="flex:1;height:9px;border-radius:5px;background:#1C1C1F;margin-left:6px"></span></div>
+<div style="height:10px;width:38%;background:#FACC15;border-radius:5px"></div>
+<div style="height:18px;width:86%;background:#E4E4E7;border-radius:5px;margin-top:12px"></div>
+<div style="height:18px;width:62%;background:#E4E4E7;border-radius:5px;margin-top:7px"></div>
+<div style="height:9px;width:74%;background:#3F3F46;border-radius:5px;margin-top:14px"></div>
+<div style="height:9px;width:56%;background:#3F3F46;border-radius:5px;margin-top:6px"></div>
+<div style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:#22C55E;color:#09090B;font-weight:700;font-size:12px;padding:9px 14px;border-radius:9px">Chamar no WhatsApp</div>
+<svg class="loop" aria-hidden="true" style="position:absolute;left:60px;top:120px;animation:cursor 4s ease-in-out infinite" width="22" height="22" viewBox="0 0 24 24" fill="#FAFAFA" stroke="#09090B" stroke-width="1.5"><path d="M5 3l14 8-6 2-2 6-6-16z"></path></svg></div>
+  <div style="margin-top:16px;display:flex;align-items:center;gap:10px"><span class="m" style="font-size:12px;font-weight:700;color:#09090B;background:#22C55E;border-radius:6px;padding:3px 7px">02</span><span class="h" style="font-size:22px;font-weight:800">Site</span></div>
+  <p style="margin:6px 0 0;color:#A1A1AA;font-size:15px;line-height:1.5">A pessoa clica, vê fotos e preços e confia.</p>
+</div><div class="rv" style="position:relative;z-index:1">
+  <div class="card" style="background:#101012;border:1px solid #27272A;border-radius:22px;padding:16px;height:250px;box-sizing:border-box;overflow:hidden;position:relative"><div style="display:flex;flex-direction:column;gap:8px;font-size:12.5px;line-height:1.4">
+<div class="loop" style="align-self:flex-end;max-width:82%;background:#005C4B;padding:8px 10px;border-radius:12px 4px 12px 12px;animation:b1 9s infinite both">Oi! Tem vaga pro réveillon?</div>
+<div class="loop" style="align-self:flex-start;max-width:86%;background:#202C33;padding:8px 10px;border-radius:4px 12px 12px 12px;animation:b2 9s infinite both">Tem sim! Suíte casal de 28/12 a 02/01. Quer ver as fotos?</div>
+<div class="loop" style="align-self:flex-end;max-width:82%;background:#005C4B;padding:8px 10px;border-radius:12px 4px 12px 12px;animation:b3 9s infinite both">Quero. E quanto fica?</div>
+<div class="loop" style="align-self:flex-start;display:flex;gap:4px;background:#202C33;padding:10px 12px;border-radius:4px 12px 12px 12px;animation:b4 9s infinite both" aria-label="digitando"><span class="dot" style="width:6px;height:6px;border-radius:50%;background:#8696A0"></span><span class="dot" style="width:6px;height:6px;border-radius:50%;background:#8696A0;animation-delay:.2s"></span><span class="dot" style="width:6px;height:6px;border-radius:50%;background:#8696A0;animation-delay:.4s"></span></div>
+</div><div class="m" style="position:absolute;right:14px;bottom:12px;font-size:10px;color:#52525B">02:14 da manhã</div></div>
+  <div style="margin-top:16px;display:flex;align-items:center;gap:10px"><span class="m" style="font-size:12px;font-weight:700;color:#09090B;background:#22C55E;border-radius:6px;padding:3px 7px">03</span><span class="h" style="font-size:22px;font-weight:800">Robô</span></div>
+  <p style="margin:6px 0 0;color:#A1A1AA;font-size:15px;line-height:1.5">Atende na hora, tira dúvidas e passa o preço.</p>
+</div><div class="rv" style="position:relative;z-index:1">
+  <div class="card" style="background:#101012;border:1px solid #27272A;border-radius:22px;padding:16px;height:250px;box-sizing:border-box;overflow:hidden;position:relative"><div class="m" style="font-size:10px;color:#52525B">seu celular</div>
+<div class="loop" style="margin-top:14px;background:#1C1C1F;border:1px solid #3F3F46;border-radius:16px;padding:14px;animation:notif 9s infinite both;box-shadow:0 20px 40px rgba(0,0,0,.5)">
+  <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#A1A1AA"><span class="live" style="width:8px;height:8px;border-radius:50%;background:#22C55E"></span>Robô · agora</div>
+  <div style="margin-top:8px;font-weight:700;font-size:15px">Cliente pronto pra fechar</div>
+  <div style="margin-top:4px;font-size:13px;color:#A1A1AA;line-height:1.4">Casal quer a suíte de 28/12 a 02/01 e pediu o Pix.</div>
+  <div style="margin-top:12px;display:inline-block;background:#FACC15;color:#09090B;font-weight:700;font-size:12px;padding:8px 12px;border-radius:9px">Assumir conversa</div>
+</div></div>
+  <div style="margin-top:16px;display:flex;align-items:center;gap:10px"><span class="m" style="font-size:12px;font-weight:700;color:#09090B;background:#22C55E;border-radius:6px;padding:3px 7px">04</span><span class="h" style="font-size:22px;font-weight:800">Você fecha</span></div>
+  <p style="margin:6px 0 0;color:#A1A1AA;font-size:15px;line-height:1.5">Só te chama quando o cliente está pronto.</p>
+</div></div>
+  </div>
+</section>
+
+<!-- MARQUEE duplo -->
+<section aria-label="Para quem eu faço" style="padding:26px 0;border-top:1px solid #1C1C1F;border-bottom:1px solid #1C1C1F;overflow:hidden;display:flex;flex-direction:column;gap:10px">
+  <div class="mq h" style="display:flex;width:max-content;gap:36px;font-size:clamp(34px,5vw,64px);font-weight:800;white-space:nowrap;line-height:1.1"><span style="color:#FAFAFA">Pousadas</span><span aria-hidden="true" style="color:#22C55E">✦</span><span style="color:#FAFAFA">Restaurantes</span><span aria-hidden="true" style="color:#FACC15">✦</span><span style="color:#FAFAFA">Agências de passeio</span><span aria-hidden="true" style="color:#22C55E">✦</span><span style="color:#FAFAFA">Clínicas</span><span aria-hidden="true" style="color:#FACC15">✦</span><span style="color:#FAFAFA">Salões e estética</span><span aria-hidden="true" style="color:#22C55E">✦</span><span style="color:#FAFAFA">Lojas</span><span aria-hidden="true" style="color:#FACC15">✦</span><span style="color:#FAFAFA">Imobiliárias</span><span aria-hidden="true" style="color:#22C55E">✦</span><span style="color:#FAFAFA">Escritórios</span><span aria-hidden="true" style="color:#FACC15">✦</span><span style="color:#FAFAFA">Condomínios</span><span aria-hidden="true" style="color:#22C55E">✦</span><span aria-hidden="true" style="color:#FAFAFA">Pousadas</span><span aria-hidden="true" style="color:#22C55E">✦</span><span aria-hidden="true" style="color:#FAFAFA">Restaurantes</span><span aria-hidden="true" style="color:#FACC15">✦</span><span aria-hidden="true" style="color:#FAFAFA">Agências de passeio</span><span aria-hidden="true" style="color:#22C55E">✦</span><span aria-hidden="true" style="color:#FAFAFA">Clínicas</span><span aria-hidden="true" style="color:#FACC15">✦</span><span aria-hidden="true" style="color:#FAFAFA">Salões e estética</span><span aria-hidden="true" style="color:#22C55E">✦</span><span aria-hidden="true" style="color:#FAFAFA">Lojas</span><span aria-hidden="true" style="color:#FACC15">✦</span><span aria-hidden="true" style="color:#FAFAFA">Imobiliárias</span><span aria-hidden="true" style="color:#22C55E">✦</span><span aria-hidden="true" style="color:#FAFAFA">Escritórios</span><span aria-hidden="true" style="color:#FACC15">✦</span><span aria-hidden="true" style="color:#FAFAFA">Condomínios</span><span aria-hidden="true" style="color:#22C55E">✦</span></div>
+  <div class="mqr h" style="display:flex;width:max-content;gap:36px;font-size:clamp(34px,5vw,64px);font-weight:800;white-space:nowrap;line-height:1.1"><span style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Pousadas</span><span aria-hidden="true" style="color:#22C55E">✦</span><span style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Restaurantes</span><span aria-hidden="true" style="color:#FACC15">✦</span><span style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Agências de passeio</span><span aria-hidden="true" style="color:#22C55E">✦</span><span style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Clínicas</span><span aria-hidden="true" style="color:#FACC15">✦</span><span style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Salões e estética</span><span aria-hidden="true" style="color:#22C55E">✦</span><span style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Lojas</span><span aria-hidden="true" style="color:#FACC15">✦</span><span style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Imobiliárias</span><span aria-hidden="true" style="color:#22C55E">✦</span><span style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Escritórios</span><span aria-hidden="true" style="color:#FACC15">✦</span><span style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Condomínios</span><span aria-hidden="true" style="color:#22C55E">✦</span><span aria-hidden="true" style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Pousadas</span><span aria-hidden="true" style="color:#22C55E">✦</span><span aria-hidden="true" style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Restaurantes</span><span aria-hidden="true" style="color:#FACC15">✦</span><span aria-hidden="true" style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Agências de passeio</span><span aria-hidden="true" style="color:#22C55E">✦</span><span aria-hidden="true" style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Clínicas</span><span aria-hidden="true" style="color:#FACC15">✦</span><span aria-hidden="true" style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Salões e estética</span><span aria-hidden="true" style="color:#22C55E">✦</span><span aria-hidden="true" style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Lojas</span><span aria-hidden="true" style="color:#FACC15">✦</span><span aria-hidden="true" style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Imobiliárias</span><span aria-hidden="true" style="color:#22C55E">✦</span><span aria-hidden="true" style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Escritórios</span><span aria-hidden="true" style="color:#FACC15">✦</span><span aria-hidden="true" style="color:transparent;-webkit-text-stroke:1.5px rgba(250,250,250,.35)">Condomínios</span><span aria-hidden="true" style="color:#22C55E">✦</span></div>
+</section>
+
+<!-- DOR: problema e solução -->
+<section style="padding:130px 24px 110px">
+  <div style="max-width:1240px;margin:0 auto">
+    <p class="m rv" style="margin:0;color:#22C55E;font-weight:700;font-size:14px">Você se reconhece?</p>
+    <h2 class="h rv" style="margin:12px 0 0;font-size:clamp(36px,4.8vw,64px);line-height:1.02;font-weight:800;letter-spacing:-.04em;max-width:880px">Cliente procurando, e você <span style="color:#FACC15">perdendo a venda</span> sem saber.</h2>
+    <div style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px">
+      <div class="card rv" style="background:#101012;border:1px solid #27272A;border-radius:26px;padding:26px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><span class="m" style="font-size:11px;font-weight:700;color:#71717A">dona de pousada</span><span class="m" style="font-size:11px;color:#52525B">só no insta</span></div>
+        <p class="h" style="margin:0;font-size:28px;line-height:1.12;font-weight:800;letter-spacing:-.025em;flex:1">“Meu negócio só existe no Instagram.”</p>
+        <div style="border-top:1px dashed #3F3F46;padding-top:16px;display:flex;gap:12px;align-items:flex-start">
+          <span aria-hidden="true" style="flex:none;width:30px;height:30px;border-radius:50%;background:#22C55E;color:#09090B;display:grid;place-items:center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          <p style="margin:0;font-size:16px;line-height:1.45;color:#D4D4D8"><b style="color:#FAFAFA">Com o site,</b> você aparece no Google para quem está procurando agora.</p>
+        </div>
+      </div><div class="card rv" style="background:#101012;border:1px solid #27272A;border-radius:26px;padding:26px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><span class="m" style="font-size:11px;font-weight:700;color:#71717A">dono de restaurante</span><span class="m" style="font-size:11px;color:#52525B">23:14</span></div>
+        <p class="h" style="margin:0;font-size:28px;line-height:1.12;font-weight:800;letter-spacing:-.025em;flex:1">“O cliente chamou às 23h e eu só vi de manhã.”</p>
+        <div style="border-top:1px dashed #3F3F46;padding-top:16px;display:flex;gap:12px;align-items:flex-start">
+          <span aria-hidden="true" style="flex:none;width:30px;height:30px;border-radius:50%;background:#FACC15;color:#09090B;display:grid;place-items:center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          <p style="margin:0;font-size:16px;line-height:1.45;color:#D4D4D8"><b style="color:#FAFAFA">Com o robô,</b> ele é atendido na hora, até de madrugada.</p>
+        </div>
+      </div><div class="card rv" style="background:#101012;border:1px solid #27272A;border-radius:26px;padding:26px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><span class="m" style="font-size:11px;font-weight:700;color:#71717A">recepção da clínica</span><span class="m" style="font-size:11px;color:#52525B">30x por dia</span></div>
+        <p class="h" style="margin:0;font-size:28px;line-height:1.12;font-weight:800;letter-spacing:-.025em;flex:1">“Respondo a mesma pergunta 30 vezes por dia.”</p>
+        <div style="border-top:1px dashed #3F3F46;padding-top:16px;display:flex;gap:12px;align-items:flex-start">
+          <span aria-hidden="true" style="flex:none;width:30px;height:30px;border-radius:50%;background:#22C55E;color:#09090B;display:grid;place-items:center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          <p style="margin:0;font-size:16px;line-height:1.45;color:#D4D4D8"><b style="color:#FAFAFA">O robô responde</b> preço, horário e endereço. Você só entra pra fechar.</p>
+        </div>
+      </div><div class="card rv" style="background:#101012;border:1px solid #27272A;border-radius:26px;padding:26px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><span class="m" style="font-size:11px;font-weight:700;color:#71717A">administrador</span><span class="m" style="font-size:11px;color:#52525B">excel</span></div>
+        <p class="h" style="margin:0;font-size:28px;line-height:1.12;font-weight:800;letter-spacing:-.025em;flex:1">“Controlo tudo numa planilha bagunçada.”</p>
+        <div style="border-top:1px dashed #3F3F46;padding-top:16px;display:flex;gap:12px;align-items:flex-start">
+          <span aria-hidden="true" style="flex:none;width:30px;height:30px;border-radius:50%;background:#FACC15;color:#09090B;display:grid;place-items:center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+          <p style="margin:0;font-size:16px;line-height:1.45;color:#D4D4D8"><b style="color:#FAFAFA">Com um sistema sob medida,</b> reservas, pagamentos e clientes ficam num lugar só.</p>
+        </div>
       </div>
-      <h1 class="h up" style="margin:24px 0 0;font-size:clamp(44px,6.2vw,80px);line-height:1.02;font-weight:800;animation-delay:.1s">
-        Seu negócio vendendo no <span style="color:#22C55E">Google</span> e no <span style="color:#FACC15">WhatsApp</span>. Até de madrugada.
-      </h1>
-      <p class="up" style="margin:24px 0 0;font-size:20px;color:#A1A1AA;max-width:560px;animation-delay:.25s">
-        Eu crio o site profissional do seu negócio e um robô que atende seus clientes no WhatsApp na hora: tira dúvidas, passa preço e te chama quando a venda está pronta para fechar.
-      </p>
-      <div class="up" style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;animation-delay:.4s">
-        <a href="#contato" data-wa="Oi, Ananda! Quero a prévia grátis do site do meu negócio." class="btn btn-y" style="background:#FACC15;color:#09090B;text-decoration:none;font-weight:700;font-size:17px;padding:18px 28px;border-radius:14px;display:inline-flex;align-items:center;gap:10px">
-          Quero a prévia grátis do meu site
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
-        </a>
-        <a href="#projetos" class="btn btn-o" style="border:1px solid #3F3F46;color:#FAFAFA;text-decoration:none;font-weight:600;font-size:17px;padding:18px 28px;border-radius:14px">Ver projetos reais</a>
+    </div>
+  </div>
+</section>
+
+<!-- BENTO -->
+<section style="padding:0 24px 130px">
+  <div style="max-width:1240px;margin:0 auto">
+    <h2 class="h rv" style="margin:0 0 40px;font-size:clamp(36px,4.8vw,64px);line-height:1.02;font-weight:800;letter-spacing:-.04em;max-width:800px">Tudo que o seu negócio precisa pra vender online.</h2>
+    <div class="bento">
+      <div class="card rv s4" style="background:#101012;border:1px solid #27272A;border-radius:28px;padding:30px 30px 0;overflow:hidden;min-height:380px;display:flex;flex-direction:column">
+        <div class="m" style="font-size:12px;font-weight:700;color:#22C55E">site</div>
+        <div class="h" style="margin-top:8px;font-size:32px;font-weight:800;line-height:1.05">Um site que convence em 3 segundos.</div>
+        <p style="margin:8px 0 0;color:#A1A1AA;font-size:16px;max-width:520px">Fotos, preços, avaliações e um botão direto pro WhatsApp. Pronto para o Google e para o celular.</p>
+        <div class="tilt" style="margin-top:26px;flex:1;border-radius:14px 14px 0 0;overflow:hidden;border:1px solid #3F3F46;border-bottom:0;transform-origin:50% 100%">
+          <img src="assets/ia-desk.jpg" alt="Site Inglês com Ananda, feito por mim" style="display:block;width:100%;height:230px;object-fit:cover;object-position:top">
+        </div>
       </div>
-      <ul class="up" style="list-style:none;padding:0;margin:36px 0 0;display:flex;gap:24px;flex-wrap:wrap;font-size:15px;color:#D4D4D8;animation-delay:.55s">
-        <li style="display:flex;align-items:center;gap:8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>Feito sob medida</li>
-        <li style="display:flex;align-items:center;gap:8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>Pronto para aparecer no Google</li>
-        <li style="display:flex;align-items:center;gap:8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>Atendimento 24h</li>
-      </ul>
+      <div class="card rv s2" style="background:#22C55E;color:#09090B;border:1px solid #22C55E;border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:380px">
+        <div class="m" style="font-size:12px;font-weight:700">atendimento</div>
+        <div>
+          <div class="h" style="font-size:clamp(96px,11vw,160px);font-weight:800;line-height:.85;letter-spacing:-.06em">24h</div>
+          <p style="margin:14px 0 0;font-size:18px;font-weight:600;line-height:1.35">O robô responde de dia, de madrugada e no feriado.</p>
+        </div>
+      </div>
+      <div class="card rv s2" style="background:#101012;border:1px solid #27272A;border-radius:28px;padding:30px;min-height:330px">
+        <div class="m" style="font-size:12px;font-weight:700;color:#22C55E">robô com ia</div>
+        <div class="h" style="margin-top:8px;font-size:26px;font-weight:800;line-height:1.08">Fala do jeito do seu negócio.</div>
+        <div style="margin-top:20px;display:flex;flex-direction:column;gap:8px;font-size:13.5px">
+          <div style="align-self:flex-end;background:#005C4B;padding:9px 12px;border-radius:14px 4px 14px 14px">Vocês abrem domingo?</div>
+          <div style="align-self:flex-start;background:#202C33;padding:9px 12px;border-radius:4px 14px 14px 14px;max-width:88%">Abrimos sim, das 11h às 22h. Quer que eu reserve uma mesa?</div>
+          <div style="align-self:flex-start;display:flex;gap:4px;background:#202C33;padding:11px 13px;border-radius:4px 14px 14px 14px" aria-label="digitando"><span class="dot" style="width:6px;height:6px;border-radius:50%;background:#8696A0"></span><span class="dot" style="width:6px;height:6px;border-radius:50%;background:#8696A0;animation-delay:.2s"></span><span class="dot" style="width:6px;height:6px;border-radius:50%;background:#8696A0;animation-delay:.4s"></span></div>
+        </div>
+      </div>
+      <div class="card rv s2" style="background:#101012;border:1px solid #27272A;border-radius:28px;padding:30px;min-height:330px;display:flex;flex-direction:column">
+        <div class="m" style="font-size:12px;font-weight:700;color:#22C55E">tráfego pago</div>
+        <div class="h" style="margin-top:8px;font-size:26px;font-weight:800;line-height:1.08">Anúncio na frente de quem procura.</div>
+        <div aria-hidden="true" style="margin-top:auto;display:flex;align-items:flex-end;gap:10px;height:120px;padding-top:20px">
+          <span class="bar" style="flex:1;height:26%;background:#27272A;border-radius:8px 8px 0 0;transform-origin:50% 100%"></span>
+          <span class="bar" style="flex:1;height:40%;background:#3F3F46;border-radius:8px 8px 0 0;transform-origin:50% 100%"></span>
+          <span class="bar" style="flex:1;height:55%;background:#166534;border-radius:8px 8px 0 0;transform-origin:50% 100%"></span>
+          <span class="bar" style="flex:1;height:74%;background:#22C55E;border-radius:8px 8px 0 0;transform-origin:50% 100%"></span>
+          <span class="bar" style="flex:1;height:100%;background:#FACC15;border-radius:8px 8px 0 0;transform-origin:50% 100%"></span>
+        </div>
+        <div class="m" style="margin-top:10px;font-size:10px;color:#52525B">gráfico ilustrativo</div>
+      </div>
+      <div class="card rv s2" style="background:#FACC15;color:#09090B;border:1px solid #FACC15;border-radius:28px;padding:30px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between">
+        <div class="m" style="font-size:12px;font-weight:700">prazo</div>
+        <div>
+          <div class="h" style="font-size:clamp(64px,7vw,104px);font-weight:800;line-height:.9;letter-spacing:-.05em">7 dias</div>
+          <p style="margin:12px 0 0;font-size:17px;font-weight:600;line-height:1.35">Site no ar em até 7 dias depois que você aprova a prévia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS com abas -->
+<section id="projetos" style="padding:0 24px 130px">
+  <div style="max-width:1240px;margin:0 auto">
+    <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+      <div>
+        <p class="m" style="margin:0;color:#22C55E;font-weight:700;font-size:14px">Projetos reais</p>
+        <h2 class="h" style="margin:12px 0 0;font-size:clamp(36px,4.8vw,64px);line-height:1.02;font-weight:800;letter-spacing:-.04em">Não é modelo pronto.<br>É <span style="color:#FACC15">negócio funcionando</span>.</h2>
+      </div>
+      <div role="tablist" aria-label="Projetos" style="display:flex;gap:6px;background:#101012;border:1px solid #27272A;border-radius:999px;padding:6px">
+        <button type="button" class="tabc" role="tab" data-tab="ingles" aria-selected="true" style="border:0;font:inherit;font-size:15px;font-weight:700;padding:12px 20px;border-radius:999px;min-height:44px;background:#FACC15;color:#09090B">Inglês com Ananda</button><button type="button" class="tabc" role="tab" data-tab="varandas" aria-selected="false" style="border:0;font:inherit;font-size:15px;font-weight:700;padding:12px 20px;border-radius:999px;min-height:44px;background:transparent;color:#A1A1AA">Varandas do Sol</button>
+      </div>
     </div>
 
-    <!-- phone with bot chat -->
-    <div style="flex:1 1 380px;min-width:0;display:flex;justify-content:center">
-      <div class="float" style="width:340px;max-width:100%;border-radius:44px;background:#18181B;border:1px solid #3F3F46;padding:12px;box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 0 1px #000">
-        <div style="border-radius:34px;overflow:hidden;background:#0B141A">
-          <div style="background:#1F2C33;padding:16px 18px;display:flex;align-items:center;gap:12px">
-            <div aria-hidden="true" style="width:38px;height:38px;border-radius:50%;background:#22C55E;display:grid;place-items:center;color:#09090B;font-weight:800;font-size:15px" class="h">AS</div>
-            <div>
-              <div style="font-weight:600;font-size:15px">Ananda Sites</div>
-              <div style="font-size:12px;color:#22C55E">online agora</div>
+    <div class="rv" style="margin-top:36px;background:#101012;border:1px solid #27272A;border-radius:32px;padding:clamp(22px,4vw,48px);overflow:hidden">
+      <div data-panel="ingles" role="tabpanel">
+        <div style="display:flex;flex-wrap:wrap;gap:44px;align-items:center">
+          <div style="flex:1 1 360px;min-width:0">
+            <div class="m" style="display:inline-block;background:#FACC15;color:#09090B;font-weight:700;font-size:12px;padding:6px 10px;border-radius:8px">case 01 · site + plataforma + robô</div>
+            <h3 class="h" style="margin:16px 0 0;font-size:42px;line-height:1.05;font-weight:800">Inglês com Ananda</h3>
+            <p style="margin:12px 0 0;color:#A1A1AA;font-size:18px">Meu próprio negócio. O site apresenta as aulas, mostra planos e depoimentos e leva o visitante pro WhatsApp, onde o robô faz o primeiro atendimento.</p>
+            <ul style="list-style:none;padding:0;margin:22px 0 0;display:grid;gap:11px;font-size:16px;color:#D4D4D8">
+              <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Página de vendas com planos e depoimentos</span></li>
+              <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Área do aluno com pagamento e materiais</span></li>
+              <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Blog para aparecer no Google</span></li>
+              <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Robô que atende quem vem dos anúncios</span></li>
+            </ul>
+            <a href="https://inglescomananda.com.br" class="btn btn-o" style="margin-top:26px;display:inline-flex;align-items:center;gap:10px;border:1px solid #3F3F46;color:#FAFAFA;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:12px">Ver o site ao vivo <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+          </div>
+          <div style="flex:1 1 480px;min-width:0;position:relative;padding-bottom:40px">
+            <div style="border-radius:16px;overflow:hidden;border:1px solid #3F3F46;box-shadow:0 30px 70px rgba(0,0,0,.6);background:#26262B">
+              <div style="height:34px;display:flex;align-items:center;gap:7px;padding:0 12px"><span style="width:10px;height:10px;border-radius:50%;background:#52525B"></span><span style="width:10px;height:10px;border-radius:50%;background:#52525B"></span><span style="width:10px;height:10px;border-radius:50%;background:#52525B"></span><span style="margin-left:8px;flex:1;background:#18181B;border-radius:6px;padding:3px 10px;font-size:12px;color:#A1A1AA">inglescomananda.com.br</span></div>
+              <img src="assets/ia-desk.jpg" alt="Site Inglês com Ananda no computador" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top">
+            </div>
+            <div style="position:absolute;right:-6px;bottom:0;width:30%;min-width:120px;border-radius:26px;background:#18181B;border:1px solid #3F3F46;padding:7px;box-shadow:0 30px 60px rgba(0,0,0,.65)">
+              <img src="assets/ia-mob.jpg" alt="Site Inglês com Ananda no celular" style="display:block;width:100%;aspect-ratio:9/19;object-fit:cover;object-position:top;border-radius:20px">
             </div>
           </div>
-          <div style="padding:18px 14px;display:flex;flex-direction:column;gap:10px;min-height:440px;font-size:14px;line-height:1.45">
-            <div style="align-self:center;font-size:11px;color:#8696A0;background:#182229;padding:4px 10px;border-radius:8px">Exemplo de conversa</div>
-            <div class="pop" style="align-self:flex-start;max-width:85%;background:#202C33;padding:10px 12px;border-radius:4px 14px 14px 14px;animation-delay:.6s">Oi! Vi que a Pousada Maré Alta tem ótimas avaliações no Google, mas ainda não tem site. Posso te mostrar uma prévia de como ficaria?</div>
-            <div class="pop" style="align-self:flex-end;max-width:80%;background:#005C4B;padding:10px 12px;border-radius:14px 4px 14px 14px;animation-delay:1.6s">Pode sim! Quanto custa?</div>
-            <div class="pop" style="align-self:flex-start;max-width:85%;background:#202C33;padding:10px 12px;border-radius:4px 14px 14px 14px;animation-delay:2.6s">Te mandei a prévia aqui embaixo. O site com robô de atendimento sai por R$ 1.297 + R$ 197/mês, ou R$ 297/mês por assinatura.</div>
-            <div class="pop" style="align-self:flex-start;width:85%;background:#202C33;padding:6px;border-radius:14px;animation-delay:3.2s">
-              <div style="border-radius:10px;background:#09090B;padding:14px;border:1px solid #27272A">
-                <div style="height:8px;width:40%;background:#FACC15;border-radius:4px"></div>
-                <div style="height:14px;width:85%;background:#3F3F46;border-radius:4px;margin-top:10px"></div>
-                <div style="height:14px;width:60%;background:#3F3F46;border-radius:4px;margin-top:6px"></div>
-                <div style="height:22px;width:48%;background:#22C55E;border-radius:6px;margin-top:12px"></div>
+        </div>
+      </div>
+      <div data-panel="varandas" role="tabpanel" hidden>
+        <div style="display:flex;flex-wrap:wrap;gap:44px;align-items:center">
+          <div style="flex:1 1 360px;min-width:0">
+            <div class="m" style="display:inline-block;background:#22C55E;color:#09090B;font-weight:700;font-size:12px;padding:6px 10px;border-radius:8px">case 02 · sistema interno de gestão</div>
+            <h3 class="h" style="margin:16px 0 0;font-size:42px;line-height:1.05;font-weight:800">Condomínio Varandas do Sol</h3>
+            <p style="margin:12px 0 0;color:#A1A1AA;font-size:18px">12 apartamentos de temporada. Antes era tudo numa planilha de Excel desorganizada. Agora reservas, pagamentos e proprietários ficam num sistema só.</p>
+            <ul style="list-style:none;padding:0;margin:22px 0 0;display:grid;gap:11px;font-size:16px;color:#D4D4D8">
+              <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Calendário dos 12 aptos com aviso de conflito</span></li>
+              <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Pagamentos com saldo a receber</span></li>
+              <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Mensagem da reserva pronta pro WhatsApp</span></li>
+              <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Extrato do proprietário em PDF</span></li>
+            </ul>
+            <p class="m" style="margin:24px 0 0;font-size:11px;color:#71717A">sistema privado · tela com dados fictícios</p>
+          </div>
+          <div style="flex:1 1 480px;min-width:0;border-radius:16px;overflow:hidden;border:1px solid #3F3F46;box-shadow:0 30px 70px rgba(0,0,0,.6);background:#FDFAF3;color:#1F2937">
+            <div style="background:#26262B;height:34px;display:flex;align-items:center;gap:7px;padding:0 12px"><span style="width:10px;height:10px;border-radius:50%;background:#52525B"></span><span style="width:10px;height:10px;border-radius:50%;background:#52525B"></span><span style="width:10px;height:10px;border-radius:50%;background:#52525B"></span><span style="margin-left:8px;flex:1;background:#18181B;border-radius:6px;padding:3px 10px;font-size:12px;color:#A1A1AA">Varandas do Sol · Sistema de reservas</span></div>
+            <div style="padding:20px">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><div><div style="font-weight:800;font-size:22px">Bom dia!</div><div style="font-size:12px;color:#6B7280">Resumo de hoje</div></div><span style="background:#F59E0B;color:#FFF;font-weight:700;font-size:12px;padding:9px 12px;border-radius:9px">+ Nova reserva</span></div>
+              <div style="margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px">
+                <div style="background:#FFF;border:1px solid #EFE7D6;border-radius:12px;padding:12px"><div style="font-size:11px;color:#6B7280">Ocupados hoje</div><div style="font-weight:800;font-size:22px">8 / 12</div></div>
+                <div style="background:#FFF;border:1px solid #EFE7D6;border-radius:12px;padding:12px"><div style="font-size:11px;color:#6B7280">Recebido no mês</div><div style="font-weight:800;font-size:22px;color:#15803D">R$ 18.450</div></div>
+                <div style="background:#FFF;border:1px solid #EFE7D6;border-radius:12px;padding:12px"><div style="font-size:11px;color:#6B7280">A receber</div><div style="font-weight:800;font-size:22px;color:#B91C1C">R$ 3.200</div></div>
               </div>
-              <div style="font-size:12px;color:#8696A0;padding:6px 4px 2px">pousadamarealta.com.br · prévia</div>
-            </div>
-            <div class="pop" style="align-self:flex-end;max-width:80%;background:#005C4B;padding:10px 12px;border-radius:14px 4px 14px 14px;animation-delay:4.4s">Amei! Como faço pra fechar?</div>
-            <div class="pop" style="align-self:flex-start;display:flex;gap:4px;background:#202C33;padding:12px 14px;border-radius:4px 14px 14px 14px;animation-delay:5.2s" aria-label="digitando">
-              <span class="dot" style="width:7px;height:7px;border-radius:50%;background:#8696A0"></span>
-              <span class="dot" style="width:7px;height:7px;border-radius:50%;background:#8696A0;animation-delay:.2s"></span>
-              <span class="dot" style="width:7px;height:7px;border-radius:50%;background:#8696A0;animation-delay:.4s"></span>
+              <div style="margin-top:12px;background:#FFF;border:1px solid #EFE7D6;border-radius:12px;padding:6px 14px">
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #F5EFE2;font-size:13px"><span><b>101</b> · Família Rocha</span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DCFCE7;color:#166534">Hospedado</span></div><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #F5EFE2;font-size:13px"><span><b>102</b> · Carla M.</span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DBEAFE;color:#1E40AF">Chega hoje</span></div><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #F5EFE2;font-size:13px"><span><b>103</b> · Paulo e Ana</span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DCFCE7;color:#166534">Hospedado</span></div><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #F5EFE2;font-size:13px"><span><b>104</b> · sem hóspede</span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#F3F4F6;color:#4B5563">Livre</span></div><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #F5EFE2;font-size:13px"><span><b>106</b> · Rafael T.</span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DBEAFE;color:#1E40AF">Chega hoje</span></div>
+              </div>
             </div>
           </div>
         </div>
@@ -218,639 +339,131 @@ body.rp-visivel .wa-float{opacity:0;pointer-events:none;transform:translateY(20p
   </div>
 </section>
 
-<!-- MARQUEE -->
-<section aria-label="Para quem eu faço sites" style="border-top:1px solid #1F1F23;border-bottom:1px solid #1F1F23;background:#22C55E;color:#09090B;overflow:hidden;padding:18px 0">
-  <div class="mq h" style="display:flex;width:max-content;gap:40px;font-size:24px;font-weight:700;white-space:nowrap">
-    <span>Pousadas</span><span aria-hidden="true">✦</span><span>Restaurantes</span><span aria-hidden="true">✦</span><span>Agências de passeio</span><span aria-hidden="true">✦</span><span>Clínicas</span><span aria-hidden="true">✦</span><span>Salões e estética</span><span aria-hidden="true">✦</span><span>Lojas</span><span aria-hidden="true">✦</span><span>Imobiliárias</span><span aria-hidden="true">✦</span><span>Escritórios</span><span aria-hidden="true">✦</span><span>Condomínios</span><span aria-hidden="true">✦</span>
-    <span aria-hidden="true">Pousadas</span><span aria-hidden="true">✦</span><span aria-hidden="true">Restaurantes</span><span aria-hidden="true">✦</span><span aria-hidden="true">Agências de passeio</span><span aria-hidden="true">✦</span><span aria-hidden="true">Clínicas</span><span aria-hidden="true">✦</span><span aria-hidden="true">Salões e estética</span><span aria-hidden="true">✦</span><span aria-hidden="true">Lojas</span><span aria-hidden="true">✦</span><span aria-hidden="true">Imobiliárias</span><span aria-hidden="true">✦</span><span aria-hidden="true">Escritórios</span><span aria-hidden="true">✦</span><span aria-hidden="true">Condomínios</span><span aria-hidden="true">✦</span>
-  </div>
-</section>
-
-<!-- DOR -->
-<section style="padding:120px 24px">
-  <div style="max-width:1200px;margin:0 auto">
-    <p class="rv" style="margin:0;color:#22C55E;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.12em">Você se reconhece?</p>
-    <h2 class="h rv" style="margin:12px 0 0;font-size:clamp(34px,4.4vw,56px);line-height:1.08;font-weight:800;max-width:820px">Cliente procurando, e você perdendo a venda sem nem saber.</h2>
-    <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
-      <div class="card rv" style="background:#121214;border:1px solid #27272A;border-radius:20px;padding:28px">
-        <div class="h" style="font-size:44px;font-weight:800;color:#FACC15;line-height:1">01</div>
-        <p style="margin:18px 0 0;font-size:19px;font-weight:600">“Meu negócio só existe no Instagram.”</p>
-        <p style="margin:8px 0 0;color:#A1A1AA;font-size:16px">Quem pesquisa no Google encontra o concorrente primeiro.</p>
-      </div>
-      <div class="card rv" style="background:#121214;border:1px solid #27272A;border-radius:20px;padding:28px">
-        <div class="h" style="font-size:44px;font-weight:800;color:#FACC15;line-height:1">02</div>
-        <p style="margin:18px 0 0;font-size:19px;font-weight:600">“O cliente chamou às 23h e eu vi de manhã.”</p>
-        <p style="margin:8px 0 0;color:#A1A1AA;font-size:16px">Ele já tinha fechado com outro que respondeu na hora.</p>
-      </div>
-      <div class="card rv" style="background:#121214;border:1px solid #27272A;border-radius:20px;padding:28px">
-        <div class="h" style="font-size:44px;font-weight:800;color:#FACC15;line-height:1">03</div>
-        <p style="margin:18px 0 0;font-size:19px;font-weight:600">“Respondo a mesma pergunta 30 vezes por dia.”</p>
-        <p style="margin:8px 0 0;color:#A1A1AA;font-size:16px">Preço, horário, endereço… tempo que você podia usar vendendo.</p>
-      </div>
-      <div class="card rv" style="background:#121214;border:1px solid #27272A;border-radius:20px;padding:28px">
-        <div class="h" style="font-size:44px;font-weight:800;color:#FACC15;line-height:1">04</div>
-        <p style="margin:18px 0 0;font-size:19px;font-weight:600">“Controlo tudo em caderno e planilha.”</p>
-        <p style="margin:8px 0 0;color:#A1A1AA;font-size:16px">Reserva, pagamento e cliente espalhados em lugares diferentes.</p>
-      </div>
+<!-- QUEM FAZ -->
+<section style="padding:0 24px 130px">
+  <div class="rv" style="max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+    <div style="flex:0 1 340px;min-width:0;position:relative">
+      <img src="assets/ananda.jpg" alt="Ananda sorrindo, de casaco claro e cachecol colorido" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:28px;transform:rotate(-2deg);border:2px solid #22C55E">
+      <span class="h" style="position:absolute;right:-10px;bottom:24px;background:#FACC15;color:#09090B;font-weight:800;font-size:16px;padding:9px 16px;border-radius:999px;transform:rotate(4deg)">eu uso o que eu vendo</span>
     </div>
-  </div>
-</section>
-
-<!-- STATEMENT (scroll fill) -->
-<section style="padding:40px 24px 120px">
-  <p class="h fill" style="max-width:1100px;margin:0 auto;font-size:clamp(34px,5vw,68px);line-height:1.1;font-weight:800;text-align:center;color:#FAFAFA">Antes de vender sites, eu construí o meu. Hoje ele traz alunos e atende no WhatsApp por mim.</p>
-</section>
-
-<!-- SOBRE -->
-<section style="padding:0 24px 120px">
-  <div class="rv" style="max-width:1200px;margin:0 auto;background:#121214;border:1px solid #27272A;border-radius:28px;padding:clamp(28px,5vw,64px);display:flex;flex-wrap:wrap;gap:48px;align-items:center">
-    <div style="flex:0 1 300px;min-width:0">
-      <div style="position:relative">
-        <img src="assets/ananda.jpg" alt="Ananda sorrindo, de casaco claro e cachecol colorido" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:22px;border:2px solid #22C55E">
-        <span style="position:absolute;left:16px;bottom:16px;background:#FACC15;color:#09090B;font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px">Baiana · Porto Seguro</span>
-      </div>
-    </div>
-    <div style="flex:1 1 440px;min-width:0">
-      <p style="margin:0;color:#22C55E;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.12em">Quem faz</p>
-      <h2 class="h" style="margin:12px 0 0;font-size:clamp(30px,3.6vw,46px);line-height:1.1;font-weight:800">Oi, eu sou a Ananda. Empreendedora como você.</h2>
-      <p style="margin:20px 0 0;color:#D4D4D8;font-size:18px">Sou professora de inglês aqui em Porto Seguro e tenho meu próprio negócio online. Para ele crescer, construí tudo sozinha: o site, o blog, a área do aluno com pagamentos e o robô que responde no WhatsApp.</p>
-      <p style="margin:16px 0 0;color:#A1A1AA;font-size:17px">Por isso eu não te entrego só uma página bonita. Entrego o que eu mesma uso todo dia para vender: um sistema pensado para trazer cliente e poupar o seu tempo.</p>
-      <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap">
-        <span style="border:1px solid #3F3F46;border-radius:999px;padding:8px 14px;font-size:14px;color:#D4D4D8">Sites e landing pages</span>
-        <span style="border:1px solid #3F3F46;border-radius:999px;padding:8px 14px;font-size:14px;color:#D4D4D8">Robôs de WhatsApp com IA</span>
-        <span style="border:1px solid #3F3F46;border-radius:999px;padding:8px 14px;font-size:14px;color:#D4D4D8">Sistemas internos</span>
-        <span style="border:1px solid #3F3F46;border-radius:999px;padding:8px 14px;font-size:14px;color:#D4D4D8">Automações</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJETOS -->
-<section id="projetos" style="padding:40px 24px 120px">
-  <div style="max-width:1200px;margin:0 auto">
-    <p class="rv" style="margin:0;color:#22C55E;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.12em">Projetos reais</p>
-    <h2 class="h rv" style="margin:12px 0 0;font-size:clamp(34px,4.4vw,56px);line-height:1.08;font-weight:800;max-width:820px">Não é modelo pronto. É <span style="color:#FACC15">negócio funcionando</span>.</h2>
-
-    <!-- Case 1 -->
-    <div style="margin-top:72px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
-      <div class="rvx" style="flex:1 1 380px;min-width:0">
-        <div style="display:inline-block;background:#FACC15;color:#09090B;font-weight:700;font-size:13px;padding:6px 12px;border-radius:8px">CASO 01 · SITE + PLATAFORMA + ROBÔ</div>
-        <h3 class="h" style="margin:18px 0 0;font-size:40px;line-height:1.1;font-weight:800">Inglês com Ananda</h3>
-        <p style="margin:14px 0 0;color:#A1A1AA;font-size:18px">Escola de inglês online. O site apresenta as aulas, mostra planos e depoimentos e leva o visitante direto para o WhatsApp, onde o robô faz o primeiro atendimento.</p>
-        <ul style="list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px;font-size:16px">
-          <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:3px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>Página de vendas com planos, depoimentos e perguntas frequentes</li>
-          <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:3px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>Área do aluno com pagamento, materiais e histórico de aulas</li>
-          <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:3px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>Blog para aparecer no Google</li>
-          <li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:3px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>Robô de WhatsApp que atende quem vem do Instagram e dos anúncios</li>
-        </ul>
-        <a href="https://inglescomananda.com.br" class="btn btn-o" style="margin-top:28px;display:inline-flex;align-items:center;gap:10px;border:1px solid #3F3F46;color:#FAFAFA;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:12px">
-          Ver o site ao vivo
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg>
-        </a>
-      </div>
-      <div class="zoom" style="flex:1 1 520px;min-width:0">
-        <div style="border-radius:16px;overflow:hidden;border:1px solid #3F3F46;box-shadow:0 30px 70px rgba(0,0,0,.55);background:#181b20">
-          <div style="background:#26262B;padding:10px 14px;display:flex;align-items:center;gap:8px">
-            <span style="width:11px;height:11px;border-radius:50%;background:#52525B"></span><span style="width:11px;height:11px;border-radius:50%;background:#52525B"></span><span style="width:11px;height:11px;border-radius:50%;background:#52525B"></span>
-            <span style="margin-left:12px;flex:1;background:#18181B;border-radius:6px;padding:4px 10px;font-size:12px;color:#A1A1AA">inglescomananda.com.br</span>
-          </div>
-          <div style="padding:22px 24px 26px">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px">
-              <span class="h" style="font-weight:800;font-size:16px">Inglês com Ananda</span>
-              <span style="display:flex;gap:10px;align-items:center;color:#A1A1AA">Área do aluno <span style="background:#FACC15;color:#09090B;padding:5px 10px;border-radius:999px;font-weight:700">Aula grátis</span></span>
-            </div>
-            <div style="margin-top:22px;display:flex;gap:18px;align-items:center">
-              <div style="flex:1">
-                <div style="height:16px;width:90%;background:#E4E4E7;border-radius:4px"></div>
-                <div style="height:16px;width:70%;background:#E4E4E7;border-radius:4px;margin-top:8px"></div>
-                <div style="height:9px;width:80%;background:#52525B;border-radius:4px;margin-top:14px"></div>
-                <div style="height:9px;width:65%;background:#52525B;border-radius:4px;margin-top:6px"></div>
-                <div style="height:28px;width:150px;background:#22C55E;border-radius:8px;margin-top:16px"></div>
-              </div>
-              <div style="width:120px;height:140px;border-radius:14px;background:#2A2E35;display:grid;place-items:center;font-size:11px;color:#71717A">foto</div>
-            </div>
-            <div style="margin-top:22px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
-              <div style="background:#23272E;border-radius:10px;padding:12px;font-size:12px"><div style="color:#A1A1AA">Plano</div><div class="h" style="font-weight:800;font-size:18px">R$ 400</div></div>
-              <div style="background:#23272E;border-radius:10px;padding:12px;font-size:12px;outline:2px solid #FACC15"><div style="color:#FACC15">Mais escolhido</div><div class="h" style="font-weight:800;font-size:18px">R$ 750</div></div>
-              <div style="background:#23272E;border-radius:10px;padding:12px;font-size:12px"><div style="color:#A1A1AA">Plano</div><div class="h" style="font-weight:800;font-size:18px">R$ 1.050</div></div>
-            </div>
-            <div style="margin-top:12px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
-              <div style="height:54px;background:#23272E;border-radius:10px"></div>
-              <div style="height:54px;background:#23272E;border-radius:10px"></div>
-              <div style="height:54px;background:#23272E;border-radius:10px"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Case 2: interactive prototype -->
-    <div style="margin-top:120px">
-      <div class="rv" style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end">
-        <div style="max-width:640px">
-          <div style="display:inline-block;background:#22C55E;color:#09090B;font-weight:700;font-size:13px;padding:6px 12px;border-radius:8px">CASO 02 · SISTEMA INTERNO DE GESTÃO</div>
-          <h3 class="h" style="margin:18px 0 0;font-size:40px;line-height:1.1;font-weight:800">Condomínio Varandas do Sol</h3>
-          <p style="margin:14px 0 0;color:#A1A1AA;font-size:18px">12 apartamentos de temporada, reservas, pagamentos e proprietários. Antes era tudo numa planilha de Excel desorganizada. Agora o administrador controla tudo pelo computador ou celular, com os dados salvos na nuvem.</p>
-        </div>
-        <p style="margin:0;font-size:14px;color:#A1A1AA;display:flex;align-items:center;gap:8px">
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FACC15" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V6a3 3 0 016 0v5"></path><path d="M12 15v2"></path><rect x="5" y="11" width="14" height="10" rx="2"></rect></svg>
-          Sistema privado · protótipo com dados fictícios. Clique nas abas.
-        </p>
-      </div>
-
-      <div class="zoom" style="margin-top:36px;border-radius:18px;overflow:hidden;border:1px solid #3F3F46;box-shadow:0 30px 80px rgba(0,0,0,.6);background:#FDFAF3;color:#1F2937">
-        <div style="background:#26262B;padding:10px 14px;display:flex;align-items:center;gap:8px">
-          <span style="width:11px;height:11px;border-radius:50%;background:#52525B"></span><span style="width:11px;height:11px;border-radius:50%;background:#52525B"></span><span style="width:11px;height:11px;border-radius:50%;background:#52525B"></span>
-          <span style="margin-left:12px;flex:1;background:#18181B;border-radius:6px;padding:4px 10px;font-size:12px;color:#A1A1AA">Varandas do Sol · Sistema de reservas</span>
-        </div>
-        <div style="display:flex;flex-wrap:wrap">
-          <!-- sidebar -->
-          <div style="flex:1 1 200px;max-width:100%;background:#FFFFFF;border-right:1px solid #EFE7D6;padding:20px 14px;box-sizing:border-box">
-            <div style="display:flex;align-items:center;gap:10px;padding:0 6px 18px">
-              <svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5" fill="#FBBF24" stroke="none"></circle><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"></path></svg>
-              <div><div style="font-weight:700;font-size:15px">Varandas do Sol</div><div style="font-size:11px;color:#6B7280">Sistema de reservas</div></div>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:4px" role="tablist" aria-label="Telas do sistema">
-              <button type="button" class="tab" role="tab" data-tab="home" aria-selected="true" style="text-align:left;border:0;font:inherit;font-size:14px;padding:10px 12px;border-radius:10px;min-height:40px;background:#FEF3C7;color:#92400E;font-weight:700">Início</button><button type="button" class="tab" role="tab" data-tab="cal" aria-selected="false" style="text-align:left;border:0;font:inherit;font-size:14px;padding:10px 12px;border-radius:10px;min-height:40px;background:transparent;color:#374151;font-weight:500">Calendário</button><button type="button" class="tab" role="tab" data-tab="res" aria-selected="false" style="text-align:left;border:0;font:inherit;font-size:14px;padding:10px 12px;border-radius:10px;min-height:40px;background:transparent;color:#374151;font-weight:500">Reservas</button>
-              <div style="padding:10px 12px;font-size:14px;color:#9CA3AF">Clientes</div>
-              <div style="padding:10px 12px;font-size:14px;color:#9CA3AF">Despesas</div>
-              <div style="padding:10px 12px;font-size:14px;color:#9CA3AF">Relatórios</div>
-            </div>
-          </div>
-
-          <!-- content -->
-          <div style="flex:999 1 560px;min-width:0;padding:24px;box-sizing:border-box">
-
-            <div data-panel="home" role="tabpanel">
-              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
-                <div><div style="font-weight:800;font-size:24px">Bom dia!</div><div style="font-size:13px;color:#6B7280">Sábado, 14 de novembro</div></div>
-                <span style="background:#F59E0B;color:#FFFFFF;font-weight:700;font-size:13px;padding:10px 14px;border-radius:10px">+ Nova reserva</span>
-              </div>
-              <div style="margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px">
-                <div style="background:#FFF;border:1px solid #EFE7D6;border-radius:12px;padding:14px"><div style="font-size:12px;color:#6B7280">Ocupados hoje</div><div style="font-weight:800;font-size:24px">8 / 12</div><div style="font-size:11px;color:#6B7280">67% de ocupação</div></div>
-                <div style="background:#FFF;border:1px solid #EFE7D6;border-radius:12px;padding:14px"><div style="font-size:12px;color:#6B7280">Chegadas hoje</div><div style="font-weight:800;font-size:24px">3</div><div style="font-size:11px;color:#6B7280">Saídas hoje: 2</div></div>
-                <div style="background:#FFF;border:1px solid #EFE7D6;border-radius:12px;padding:14px"><div style="font-size:12px;color:#6B7280">Recebido no mês</div><div style="font-weight:800;font-size:24px;color:#15803D">R$ 18.450</div><div style="font-size:11px;color:#6B7280">Despesas: R$ 2.130</div></div>
-                <div style="background:#FFF;border:1px solid #EFE7D6;border-radius:12px;padding:14px"><div style="font-size:12px;color:#6B7280">A receber</div><div style="font-weight:800;font-size:24px;color:#B91C1C">R$ 3.200</div><div style="font-size:11px;color:#6B7280">2 pré-reservas aguardando</div></div>
-              </div>
-              <div style="margin-top:14px;background:#FFF;border:1px solid #EFE7D6;border-radius:12px;padding:14px 16px;overflow-x:auto">
-                <div style="font-weight:700;font-size:15px;margin-bottom:8px">Situação dos apartamentos hoje</div>
-                <div style="min-width:460px">
-                  <div style="display:grid;grid-template-columns:60px 1.2fr 1fr 1.2fr;gap:8px;font-size:11px;color:#6B7280;text-transform:uppercase;letter-spacing:.06em;padding:6px 0;border-bottom:1px solid #EFE7D6"><span>Apto</span><span>Proprietário</span><span>Situação</span><span>Hóspede</span></div>
-                  
-                    <div style="display:grid;grid-template-columns:60px 1.2fr 1fr 1.2fr;gap:8px;font-size:13px;padding:7px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <span style="font-weight:700">101</span><span>Proprietária A</span>
-                      <span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DCFCE7;color:#166534">Hospedado</span></span>
-                      <span>Família Rocha</span>
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:60px 1.2fr 1fr 1.2fr;gap:8px;font-size:13px;padding:7px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <span style="font-weight:700">102</span><span>Proprietário B</span>
-                      <span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DBEAFE;color:#1E40AF">Chega hoje</span></span>
-                      <span>Carla M.</span>
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:60px 1.2fr 1fr 1.2fr;gap:8px;font-size:13px;padding:7px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <span style="font-weight:700">103</span><span>Proprietária C</span>
-                      <span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DCFCE7;color:#166534">Hospedado</span></span>
-                      <span>Paulo e Ana</span>
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:60px 1.2fr 1fr 1.2fr;gap:8px;font-size:13px;padding:7px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <span style="font-weight:700">104</span><span>Proprietário D</span>
-                      <span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#F3F4F6;color:#4B5563">Livre</span></span>
-                      <span>—</span>
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:60px 1.2fr 1fr 1.2fr;gap:8px;font-size:13px;padding:7px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <span style="font-weight:700">105</span><span>Proprietária E</span>
-                      <span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DCFCE7;color:#166534">Hospedado</span></span>
-                      <span>Grupo Silveira</span>
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:60px 1.2fr 1fr 1.2fr;gap:8px;font-size:13px;padding:7px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <span style="font-weight:700">106</span><span>Proprietário F</span>
-                      <span><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DBEAFE;color:#1E40AF">Chega hoje</span></span>
-                      <span>Rafael T.</span>
-                    </div>
-                  
-                </div>
-              </div>
-            </div>
-
-            <div data-panel="cal" role="tabpanel" hidden>
-              <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-                <div><div style="font-weight:800;font-size:24px">Calendário de ocupação</div><div style="font-size:13px;color:#6B7280">Clique num espaço vazio para criar uma reserva.</div></div>
-                <div style="font-weight:700">Novembro</div>
-              </div>
-              <div style="margin-top:16px;background:#FFF;border:1px solid #EFE7D6;border-radius:12px;overflow-x:auto">
-                <div style="min-width:640px;padding:8px">
-                  <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));font-size:11px;color:#6B7280;text-align:center;padding-bottom:4px">
-                    <span style="text-align:left;font-weight:700;color:#1F2937;padding-left:6px">Apto</span>
-                    <span style="grid-column:2;padding:4px 0;background:#F59E0B;color:#FFF;border-radius:6px;font-weight:700">sáb 14</span><span style="grid-column:3;padding:4px 0;background:#FBF6EA;">dom 15</span><span style="grid-column:4;padding:4px 0;">seg 16</span><span style="grid-column:5;padding:4px 0;">ter 17</span><span style="grid-column:6;padding:4px 0;">qua 18</span><span style="grid-column:7;padding:4px 0;">qui 19</span><span style="grid-column:8;padding:4px 0;">sex 20</span><span style="grid-column:9;padding:4px 0;background:#FBF6EA;">sáb 21</span><span style="grid-column:10;padding:4px 0;background:#FBF6EA;">dom 22</span><span style="grid-column:11;padding:4px 0;">seg 23</span><span style="grid-column:12;padding:4px 0;">ter 24</span><span style="grid-column:13;padding:4px 0;">qua 25</span><span style="grid-column:14;padding:4px 0;">qui 26</span><span style="grid-column:15;padding:4px 0;">sex 27</span>
-                  </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">101</span>
-                      
-                        <span style="grid-row:1;grid-column:2 / span 3;background:#BBF7D0;color:#166534;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Família Rocha</span>
-                      
-                        <span style="grid-row:1;grid-column:7 / span 4;background:#DBEAFE;color:#1E40AF;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Juliana P.</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">102</span>
-                      
-                        <span style="grid-row:1;grid-column:4 / span 4;background:#DBEAFE;color:#1E40AF;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Família Rocha</span>
-                      
-                        <span style="grid-row:1;grid-column:11 / span 3;background:#FEF3C7;color:#92400E;border:1px dashed #F59E0B;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Marcos L.</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">103</span>
-                      
-                        <span style="grid-row:1;grid-column:2 / span 6;background:#BBF7D0;color:#166534;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Paulo e Ana</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">104</span>
-                      
-                        <span style="grid-row:1;grid-column:9 / span 5;background:#DBEAFE;color:#1E40AF;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Grupo Lima</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">105</span>
-                      
-                        <span style="grid-row:1;grid-column:2 / span 2;background:#BBF7D0;color:#166534;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Grupo Silveira</span>
-                      
-                        <span style="grid-row:1;grid-column:6 / span 3;background:#FEF3C7;color:#92400E;border:1px dashed #F59E0B;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Bruna S.</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">106</span>
-                      
-                        <span style="grid-row:1;grid-column:2 / span 4;background:#BBF7D0;color:#166534;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Rafael T.</span>
-                      
-                        <span style="grid-row:1;grid-column:10 / span 6;background:#DBEAFE;color:#1E40AF;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Família Costa</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">201</span>
-                      
-                        <span style="grid-row:1;grid-column:3 / span 5;background:#DBEAFE;color:#1E40AF;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Diego F.</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">202</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">203</span>
-                      
-                        <span style="grid-row:1;grid-column:2 / span 3;background:#BBF7D0;color:#166534;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Lúcia R.</span>
-                      
-                        <span style="grid-row:1;grid-column:12 / span 4;background:#FEF3C7;color:#92400E;border:1px dashed #F59E0B;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Thiago M.</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">204</span>
-                      
-                        <span style="grid-row:1;grid-column:5 / span 7;background:#DBEAFE;color:#1E40AF;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Família Nunes</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">205</span>
-                      
-                        <span style="grid-row:1;grid-column:2 / span 1;background:#BBF7D0;color:#166534;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Sérgio A.</span>
-                      
-                        <span style="grid-row:1;grid-column:8 / span 3;background:#DBEAFE;color:#1E40AF;border:0;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Camila B.</span>
-                      
-                    </div>
-                  
-                    <div style="display:grid;grid-template-columns:52px repeat(14,minmax(0,1fr));grid-template-rows:30px;align-items:center;border-top:1px solid #F5EFE2">
-                      <span style="grid-row:1;grid-column:1;font-weight:700;font-size:12px;padding-left:6px">206</span>
-                      
-                        <span style="grid-row:1;grid-column:13 / span 3;background:#FEF3C7;color:#92400E;border:1px dashed #F59E0B;border-radius:7px;font-size:11px;font-weight:700;padding:4px 8px;margin:0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Renata V.</span>
-                      
-                    </div>
-                  
-                </div>
-              </div>
-              <div style="margin-top:10px;display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#4B5563">
-                <span style="display:flex;align-items:center;gap:6px"><span style="width:12px;height:12px;border-radius:3px;background:#FEF3C7;border:1px dashed #F59E0B"></span>Pré-reserva</span>
-                <span style="display:flex;align-items:center;gap:6px"><span style="width:12px;height:12px;border-radius:3px;background:#DBEAFE"></span>Confirmada</span>
-                <span style="display:flex;align-items:center;gap:6px"><span style="width:12px;height:12px;border-radius:3px;background:#BBF7D0"></span>Hospedado</span>
-              </div>
-            </div>
-
-            <div data-panel="res" role="tabpanel" hidden>
-              <div style="font-weight:800;font-size:24px">Reservas</div>
-              <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:16px">
-                <div style="flex:1 1 300px;min-width:0;background:#FFF;border:1px solid #EFE7D6;border-radius:12px;padding:6px 14px">
-                  
-                    <div style="display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <div><div style="font-weight:700;font-size:14px">Apto 102 · Família Rocha</div><div style="font-size:12px;color:#6B7280">16 a 20/11 · WhatsApp</div></div>
-                      <div style="text-align:right"><div style="font-weight:700;font-size:13px">R$ 1.400</div><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#FEF3C7;color:#92400E">Parcial</span></div>
-                    </div>
-                  
-                    <div style="display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <div><div style="font-weight:700;font-size:14px">Apto 104 · Grupo Lima</div><div style="font-size:12px;color:#6B7280">21 a 26/11 · Instagram</div></div>
-                      <div style="text-align:right"><div style="font-weight:700;font-size:13px">R$ 2.250</div><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DCFCE7;color:#166534">Pago</span></div>
-                    </div>
-                  
-                    <div style="display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <div><div style="font-weight:700;font-size:14px">Apto 106 · Família Costa</div><div style="font-size:12px;color:#6B7280">22 a 28/11 · Airbnb</div></div>
-                      <div style="text-align:right"><div style="font-weight:700;font-size:13px">R$ 2.700</div><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#DCFCE7;color:#166534">Pago</span></div>
-                    </div>
-                  
-                    <div style="display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <div><div style="font-weight:700;font-size:14px">Apto 102 · Marcos L.</div><div style="font-size:12px;color:#6B7280">23 a 26/11 · Indicação</div></div>
-                      <div style="text-align:right"><div style="font-weight:700;font-size:13px">R$ 1.050</div><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#FEE2E2;color:#991B1B">Pendente</span></div>
-                    </div>
-                  
-                    <div style="display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid #F5EFE2;align-items:center">
-                      <div><div style="font-weight:700;font-size:14px">Apto 204 · Família Nunes</div><div style="font-size:12px;color:#6B7280">17 a 24/11 · WhatsApp</div></div>
-                      <div style="text-align:right"><div style="font-weight:700;font-size:13px">R$ 2.450</div><span style="display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#FEF3C7;color:#92400E">Parcial</span></div>
-                    </div>
-                  
-                </div>
-                <div style="flex:1 1 260px;min-width:0;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:12px;padding:16px">
-                  <div style="font-size:12px;font-weight:700;color:#047857;text-transform:uppercase;letter-spacing:.06em">Mensagem gerada automaticamente</div>
-                  <div style="margin-top:10px;background:#FFF;border-radius:10px;padding:12px;font-size:13px;line-height:1.55;white-space:pre-line">Olá, Família Rocha! Sua reserva no Varandas do Sol está confirmada.
-Apto 102 · 16 a 20/11 · 4 diárias
-Total: R$ 1.400 · Pago: R$ 700
-Falta: R$ 700 — chave PIX do proprietário
-Check-in a partir das 14h.</div>
-                  <div style="margin-top:12px;display:inline-block;background:#16A34A;color:#FFF;font-weight:700;font-size:13px;padding:9px 14px;border-radius:9px">Enviar no WhatsApp</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="rv" style="margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
-        <div style="border:1px solid #27272A;border-radius:16px;padding:20px;background:#121214"><div style="font-weight:700">Calendário dos 12 aptos</div><div style="margin-top:6px;color:#A1A1AA;font-size:15px">Aviso automático se duas reservas baterem na mesma data.</div></div>
-        <div style="border:1px solid #27272A;border-radius:16px;padding:20px;background:#121214"><div style="font-weight:700">Pagamentos e saldo</div><div style="margin-top:6px;color:#A1A1AA;font-size:15px">PIX, transferência ou dinheiro, com quanto já foi pago e quanto falta.</div></div>
-        <div style="border:1px solid #27272A;border-radius:16px;padding:20px;background:#121214"><div style="font-weight:700">Mensagem pronta</div><div style="margin-top:6px;color:#A1A1AA;font-size:15px">Um clique gera o texto para o hóspede e para o proprietário.</div></div>
-        <div style="border:1px solid #27272A;border-radius:16px;padding:20px;background:#121214"><div style="font-weight:700">Extrato do proprietário</div><div style="margin-top:6px;color:#A1A1AA;font-size:15px">Relatório do mês por apartamento, pronto para imprimir em PDF.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ROBO -->
-<section id="robo" style="padding:120px 24px;background:#FACC15;color:#09090B">
-  <div style="max-width:1200px;margin:0 auto">
-    <p class="rv" style="margin:0;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.12em">Robô de WhatsApp com IA</p>
-    <h2 class="h rv" style="margin:12px 0 0;font-size:clamp(36px,5vw,64px);line-height:1.04;font-weight:800;max-width:900px">Um vendedor que não dorme, não esquece e não deixa cliente esperando.</h2>
-    <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
-      <div class="rv" style="background:#09090B;color:#FAFAFA;border-radius:20px;padding:26px">
-        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-        <div class="h" style="margin-top:14px;font-size:22px;font-weight:700">Responde na hora</div>
-        <p style="margin:6px 0 0;color:#A1A1AA;font-size:16px">De dia, de noite e no fim de semana. Cliente atendido rápido compra de quem respondeu primeiro.</p>
-      </div>
-      <div class="rv" style="background:#09090B;color:#FAFAFA;border-radius:20px;padding:26px">
-        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path><path d="M8 9h8M8 13h5"></path></svg>
-        <div class="h" style="margin-top:14px;font-size:22px;font-weight:700">Fala como o seu negócio</div>
-        <p style="margin:6px 0 0;color:#A1A1AA;font-size:16px">Treinado com seus preços, horários, regras e jeito de falar. Nada de resposta robótica.</p>
-      </div>
-      <div class="rv" style="background:#09090B;color:#FAFAFA;border-radius:20px;padding:26px">
-        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"></path></svg>
-        <div class="h" style="margin-top:14px;font-size:22px;font-weight:700">Passa preço e manda o Pix</div>
-        <p style="margin:6px 0 0;color:#A1A1AA;font-size:16px">Tira dúvidas, contorna objeções comuns e envia os dados de pagamento.</p>
-      </div>
-      <div class="rv" style="background:#09090B;color:#FAFAFA;border-radius:20px;padding:26px">
-        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 01-3.4 0"></path></svg>
-        <div class="h" style="margin-top:14px;font-size:22px;font-weight:700">Te chama na hora certa</div>
-        <p style="margin:6px 0 0;color:#A1A1AA;font-size:16px">Quando o cliente está pronto para fechar, você recebe o aviso e assume a conversa.</p>
-      </div>
-      <div class="rv" style="background:#09090B;color:#FAFAFA;border-radius:20px;padding:26px">
-        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0115-6.7L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 01-15 6.7L3 16"></path><path d="M3 21v-5h5"></path></svg>
-        <div class="h" style="margin-top:14px;font-size:22px;font-weight:700">Retoma quem sumiu</div>
-        <p style="margin:6px 0 0;color:#A1A1AA;font-size:16px">Lembra o cliente que perguntou e não respondeu mais, no horário comercial.</p>
-      </div>
-      <div class="rv" style="background:#09090B;color:#FAFAFA;border-radius:20px;padding:26px">
-        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
-        <div class="h" style="margin-top:14px;font-size:22px;font-weight:700">Atende todo canal</div>
-        <p style="margin:6px 0 0;color:#A1A1AA;font-size:16px">Quem vem do Instagram, do anúncio, do Google ou de indicação cai no mesmo atendimento.</p>
-      </div>
+    <div style="flex:1 1 460px;min-width:0">
+      <p class="m" style="margin:0;color:#22C55E;font-weight:700;font-size:14px">Quem faz</p>
+      <h2 class="h" style="margin:12px 0 0;font-size:clamp(34px,4.4vw,58px);line-height:1.03;font-weight:800;letter-spacing:-.04em">Oi, eu sou a Ananda. Empreendedora como você.</h2>
+      <p style="margin:20px 0 0;color:#D4D4D8;font-size:19px">Sou professora de inglês e tenho meu próprio negócio online. Para ele crescer, construí tudo sozinha: o site, o blog, a área do aluno com pagamentos e o robô que responde no WhatsApp.</p>
+      <p style="margin:14px 0 0;color:#A1A1AA;font-size:17px">Por isso eu não te entrego só uma página bonita. Entrego o sistema que eu mesma uso todo dia para vender.</p>
     </div>
   </div>
 </section>
 
 <!-- PACOTES -->
-<section id="pacotes" style="padding:120px 24px">
-  <div style="max-width:1240px;margin:0 auto">
-    <p class="rv" style="margin:0;color:#22C55E;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.12em;text-align:center">Pacotes</p>
-    <h2 class="h rv" style="margin:12px auto 0;font-size:clamp(34px,4.4vw,56px);line-height:1.08;font-weight:800;max-width:820px;text-align:center">Comece pequeno. Cresça até a <span style="color:#FACC15">Máquina de Clientes</span>.</h2>
-    <div class="rv" style="margin:24px auto 0;display:flex;justify-content:center">
-      <span style="display:inline-flex;align-items:center;gap:10px;background:#1A1A0B;border:1px solid #FACC15;color:#FACC15;border-radius:999px;padding:10px 18px;font-size:15px;font-weight:600">
-        <span class="live" style="width:9px;height:9px;border-radius:50%;background:#FACC15"></span>
-        Preço de lançamento para os 5 primeiros clientes, até 31/12
-      </span>
-    </div>
-    <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;align-items:stretch">
-
-      <div class="card rv" style="background:#121214;border:1px solid #27272A;border-radius:24px;padding:28px;display:flex;flex-direction:column">
-        <div style="color:#A1A1AA;font-size:13px;font-weight:700;letter-spacing:.08em">PLANO 1</div>
-        <div class="h" style="margin-top:6px;font-size:24px;font-weight:700">Presença</div>
-        <p style="margin:6px 0 0;color:#A1A1AA;font-size:15px">Para existir no Google e passar confiança.</p>
-        <div style="margin-top:22px;color:#A1A1AA;font-size:13px">Implantação</div>
-        <div class="h" style="font-size:38px;font-weight:800;line-height:1.1">R$ 697</div>
-        <div style="margin-top:6px;font-size:15px;color:#D4D4D8">+ <strong style="color:#FAFAFA">R$ 49</strong>/mês</div>
-        <ul style="list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px;font-size:15px;color:#D4D4D8;flex:1">
-          <li>Página única sob medida</li><li>Botão direto para o WhatsApp</li><li>Google Meu Negócio configurado</li><li>Hospedagem e pequenos ajustes inclusos</li>
-        </ul>
-        <a href="#contato" class="btn btn-o" data-wa="Oi, Ananda! Tenho interesse no plano Presença." style="margin-top:26px;text-align:center;border:1px solid #3F3F46;color:#FAFAFA;text-decoration:none;font-weight:600;padding:15px;border-radius:12px">Quero esse</a>
-      </div>
-
-      <div class="card rv" style="background:#121214;border:1px solid #27272A;border-radius:24px;padding:28px;display:flex;flex-direction:column">
-        <div style="color:#A1A1AA;font-size:13px;font-weight:700;letter-spacing:.08em">PLANO 2</div>
-        <div class="h" style="margin-top:6px;font-size:24px;font-weight:700">Atendimento 24h</div>
-        <p style="margin:6px 0 0;color:#A1A1AA;font-size:15px">O site traz o cliente. O robô não deixa ele esperando.</p>
-        <div style="margin-top:22px;color:#A1A1AA;font-size:13px">Implantação</div>
-        <div class="h" style="font-size:38px;font-weight:800;line-height:1.1">R$ 1.297</div>
-        <div style="margin-top:6px;font-size:15px;color:#D4D4D8">+ <strong style="color:#FAFAFA">R$ 197</strong>/mês</div>
-        <ul style="list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px;font-size:15px;color:#D4D4D8;flex:1">
-          <li>Tudo do Presença</li><li>Robô de WhatsApp com IA</li><li>Responde dúvidas, preços e horários</li><li>Te avisa quando é hora de fechar</li>
-        </ul>
-        <a href="#contato" class="btn btn-o" data-wa="Oi, Ananda! Tenho interesse no plano Atendimento 24h." style="margin-top:26px;text-align:center;border:1px solid #3F3F46;color:#FAFAFA;text-decoration:none;font-weight:600;padding:15px;border-radius:12px">Quero esse</a>
-      </div>
-
-      <div class="card rv" style="background:#09090B;border:2px solid #22C55E;border-radius:24px;padding:28px;display:flex;flex-direction:column;position:relative;box-shadow:0 20px 60px rgba(34,197,94,.15)">
-        <span style="position:absolute;top:-14px;left:28px;background:#22C55E;color:#09090B;font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px">Mais completo para vender</span>
-        <div style="color:#22C55E;font-size:13px;font-weight:700;letter-spacing:.08em">PLANO 3</div>
-        <div class="h" style="margin-top:6px;font-size:24px;font-weight:700">Máquina de Clientes</div>
-        <p style="margin:6px 0 0;color:#A1A1AA;font-size:15px">Anúncio que traz, site que convence, robô que atende.</p>
-        <div style="margin-top:22px;color:#A1A1AA;font-size:13px">Implantação</div>
-        <div class="h" style="font-size:38px;font-weight:800;line-height:1.1;color:#FACC15">R$ 1.697</div>
-        <div style="margin-top:6px;font-size:15px;color:#D4D4D8">+ <strong style="color:#FAFAFA">R$ 797</strong>/mês <span style="color:#A1A1AA">+ verba de anúncio</span></div>
-        <ul style="list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px;font-size:15px;color:#D4D4D8;flex:1">
-          <li>Tudo do Atendimento 24h</li><li>Gestão de anúncios no Instagram e Facebook</li><li>Campanhas, públicos e criativos</li><li>Relatório mensal de resultados</li>
-        </ul>
-        <a href="#contato" class="btn btn-y" data-wa="Oi, Ananda! Tenho interesse no plano Máquina de Clientes." style="margin-top:26px;text-align:center;background:#FACC15;color:#09090B;text-decoration:none;font-weight:700;padding:15px;border-radius:12px">Quero esse</a>
-      </div>
-
-      <div class="card rv" style="background:#121214;border:1px solid #27272A;border-radius:24px;padding:28px;display:flex;flex-direction:column">
-        <div style="color:#A1A1AA;font-size:13px;font-weight:700;letter-spacing:.08em">PLANO 4</div>
-        <div class="h" style="margin-top:6px;font-size:24px;font-weight:700">Sob medida</div>
-        <p style="margin:6px 0 0;color:#A1A1AA;font-size:15px">Para organizar o negócio por dentro, como o Varandas do Sol.</p>
-        <div style="margin-top:22px;color:#A1A1AA;font-size:13px">Implantação a partir de</div>
-        <div class="h" style="font-size:38px;font-weight:800;line-height:1.1">R$ 2.500</div>
-        <div style="margin-top:6px;font-size:15px;color:#D4D4D8">+ a partir de <strong style="color:#FAFAFA">R$ 99</strong>/mês</div>
-        <ul style="list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px;font-size:15px;color:#D4D4D8;flex:1">
-          <li>Sistema interno com login</li><li>Reservas, agenda e clientes</li><li>Pagamentos e relatórios</li><li>Automações sob medida</li>
-        </ul>
-        <a href="#contato" class="btn btn-o" data-wa="Oi, Ananda! Tenho interesse no plano Sob medida." style="margin-top:26px;text-align:center;border:1px solid #3F3F46;color:#FAFAFA;text-decoration:none;font-weight:600;padding:15px;border-radius:12px">Conversar</a>
-      </div>
-    </div>
-
-    <div class="rv" style="margin-top:22px;border:1px dashed #3F3F46;border-radius:20px;padding:22px 26px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-      <div style="min-width:0;flex:1 1 420px">
-        <div class="h" style="font-size:20px;font-weight:700">Sem dinheiro para a implantação agora?</div>
-        <p style="margin:4px 0 0;color:#A1A1AA;font-size:15px">Faça por assinatura, sem entrada: site por <strong style="color:#FAFAFA">R$ 99/mês</strong> ou site + robô por <strong style="color:#FAFAFA">R$ 297/mês</strong>, com contrato de 12 meses.</p>
-      </div>
-      <a href="#contato" data-wa="Oi, Ananda! Quero fazer o site por assinatura." class="btn btn-o" style="border:1px solid #3F3F46;color:#FAFAFA;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:12px">Quero por assinatura</a>
+<section id="pacotes" style="padding:0 24px 130px">
+  <div style="max-width:1280px;margin:0 auto">
+    <h2 class="h rv" style="margin:0 auto;font-size:clamp(36px,4.8vw,64px);line-height:1.02;font-weight:800;letter-spacing:-.04em;max-width:820px;text-align:center">Comece pequeno. Cresça até a <span style="color:#FACC15">Máquina de Clientes</span>.</h2>
+    <div class="rv" style="margin:24px auto 0;display:flex;justify-content:center"><span style="display:inline-flex;align-items:center;gap:10px;background:#1A1A0B;border:1px solid #FACC15;color:#FACC15;border-radius:999px;padding:10px 18px;font-size:15px;font-weight:600"><span class="livey" style="width:9px;height:9px;border-radius:50%;background:#FACC15"></span>Preço de lançamento para os 5 primeiros clientes, até 31/12</span></div>
+    <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;align-items:stretch"><div class="card rv" style="background:#101012;border:1px solid #27272A;border-radius:26px;padding:30px;display:flex;flex-direction:column"><div class="m" style="font-size:12px;font-weight:700;color:#71717A">plano 1</div>
+<div class="h" style="margin-top:8px;font-size:26px;font-weight:800">Presença</div>
+<p style="margin:6px 0 0;color:#A1A1AA;font-size:15px;line-height:1.45">Para existir no Google e passar confiança.</p>
+<div style="margin-top:24px;color:#A1A1AA;font-size:13px">Implantação</div>
+<div class="h" style="font-size:44px;font-weight:800;line-height:1.05;color:#FAFAFA">R$ 697</div>
+<div style="margin-top:6px;font-size:15px;color:#D4D4D8">+ <b style="color:#FAFAFA">R$ 49</b>/mês</div>
+<ul style="list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;font-size:15px;color:#D4D4D8;flex:1"><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Página única sob medida</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Botão direto para o WhatsApp</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Google Meu Negócio configurado</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Hospedagem e pequenos ajustes</span></li></ul>
+<a href="https://wa.me/557336791767?text=Oi%2C%20Ananda%21%20Tenho%20interesse%20no%20plano%20Presen%C3%A7a." class="btn btn-o" style="margin-top:28px;text-align:center;text-decoration:none;font-weight:700;padding:16px;border-radius:14px;border:1px solid #3F3F46;color:#FAFAFA">Quero esse</a></div><div class="card rv" style="background:#101012;border:1px solid #27272A;border-radius:26px;padding:30px;display:flex;flex-direction:column"><div class="m" style="font-size:12px;font-weight:700;color:#71717A">plano 2</div>
+<div class="h" style="margin-top:8px;font-size:26px;font-weight:800">Atendimento 24h</div>
+<p style="margin:6px 0 0;color:#A1A1AA;font-size:15px;line-height:1.45">O site traz o cliente. O robô não deixa ele esperando.</p>
+<div style="margin-top:24px;color:#A1A1AA;font-size:13px">Implantação</div>
+<div class="h" style="font-size:44px;font-weight:800;line-height:1.05;color:#FAFAFA">R$ 1.297</div>
+<div style="margin-top:6px;font-size:15px;color:#D4D4D8">+ <b style="color:#FAFAFA">R$ 197</b>/mês</div>
+<ul style="list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;font-size:15px;color:#D4D4D8;flex:1"><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Tudo do Presença</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Robô de WhatsApp com IA</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Responde dúvidas, preços e horários</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Te avisa quando é hora de fechar</span></li></ul>
+<a href="https://wa.me/557336791767?text=Oi%2C%20Ananda%21%20Tenho%20interesse%20no%20plano%20Atendimento%2024h." class="btn btn-o" style="margin-top:28px;text-align:center;text-decoration:none;font-weight:700;padding:16px;border-radius:14px;border:1px solid #3F3F46;color:#FAFAFA">Quero esse</a></div><div class="rv borda" style="border-radius:26px;padding:2px;display:flex;box-shadow:0 30px 80px rgba(34,197,94,.18)"><div style="background:#0B0B0D;border-radius:24px;padding:30px;display:flex;flex-direction:column;flex:1;position:relative"><span style="position:absolute;top:-15px;left:28px;background:#22C55E;color:#09090B;font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px">Mais completo para vender</span><div class="m" style="font-size:12px;font-weight:700;color:#22C55E">plano 3</div>
+<div class="h" style="margin-top:8px;font-size:26px;font-weight:800">Máquina de Clientes</div>
+<p style="margin:6px 0 0;color:#A1A1AA;font-size:15px;line-height:1.45">Anúncio que traz, site que convence, robô que atende.</p>
+<div style="margin-top:24px;color:#A1A1AA;font-size:13px">Implantação</div>
+<div class="h" style="font-size:44px;font-weight:800;line-height:1.05;color:#FACC15">R$ 1.697</div>
+<div style="margin-top:6px;font-size:15px;color:#D4D4D8">+ <b style="color:#FAFAFA">R$ 797</b>/mês <span style="color:#A1A1AA">+ verba de anúncio</span></div>
+<ul style="list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;font-size:15px;color:#D4D4D8;flex:1"><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Tudo do Atendimento 24h</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Gestão de anúncios no Instagram e Facebook</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Campanhas, públicos e criativos</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Relatório mensal de resultados</span></li></ul>
+<a href="https://wa.me/557336791767?text=Oi%2C%20Ananda%21%20Tenho%20interesse%20no%20plano%20M%C3%A1quina%20de%20Clientes." class="btn btn-y" style="margin-top:28px;text-align:center;text-decoration:none;font-weight:700;padding:16px;border-radius:14px;background:#FACC15;color:#09090B">Quero esse</a></div></div><div class="card rv" style="background:#101012;border:1px solid #27272A;border-radius:26px;padding:30px;display:flex;flex-direction:column"><div class="m" style="font-size:12px;font-weight:700;color:#71717A">plano 4</div>
+<div class="h" style="margin-top:8px;font-size:26px;font-weight:800">Sob medida</div>
+<p style="margin:6px 0 0;color:#A1A1AA;font-size:15px;line-height:1.45">Para organizar o negócio por dentro, como o Varandas do Sol.</p>
+<div style="margin-top:24px;color:#A1A1AA;font-size:13px">Implantação a partir de</div>
+<div class="h" style="font-size:44px;font-weight:800;line-height:1.05;color:#FAFAFA">R$ 2.500</div>
+<div style="margin-top:6px;font-size:15px;color:#D4D4D8">+ a partir de <b style="color:#FAFAFA">R$ 99</b>/mês</div>
+<ul style="list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;font-size:15px;color:#D4D4D8;flex:1"><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Sistema interno com login</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Reservas, agenda e clientes</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Pagamentos e relatórios</span></li><li style="display:flex;gap:10px"><svg aria-hidden="true" style="flex:none;margin-top:4px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Automações sob medida</span></li></ul>
+<a href="https://wa.me/557336791767?text=Oi%2C%20Ananda%21%20Tenho%20interesse%20no%20plano%20Sob%20medida." class="btn btn-o" style="margin-top:28px;text-align:center;text-decoration:none;font-weight:700;padding:16px;border-radius:14px;border:1px solid #3F3F46;color:#FAFAFA">Conversar</a></div></div>
+    <div class="rv" style="margin-top:22px;border:1px dashed #3F3F46;border-radius:22px;padding:22px 26px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
+      <div style="min-width:0;flex:1 1 420px"><div class="h" style="font-size:22px;font-weight:800">Sem dinheiro para a implantação agora?</div><p style="margin:4px 0 0;color:#A1A1AA;font-size:15px">Faça por assinatura, sem entrada: site por <b style="color:#FAFAFA">R$ 99/mês</b> ou site + robô por <b style="color:#FAFAFA">R$ 297/mês</b>, com contrato de 12 meses.</p></div>
+      <a href="https://wa.me/557336791767?text=Oi%2C%20Ananda%21%20Quero%20fazer%20o%20site%20por%20assinatura." class="btn btn-o" style="border:1px solid #3F3F46;color:#FAFAFA;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:12px">Quero por assinatura</a>
     </div>
     <p style="margin:18px 0 0;text-align:center;color:#71717A;font-size:13px">A verba de anúncio é paga direto ao Instagram/Facebook e não passa por mim. Recomendo começar com pelo menos R$ 1.500/mês.</p>
   </div>
 </section>
 
-<!-- COMO FUNCIONA -->
-<section style="padding:40px 24px 120px">
-  <div style="max-width:1200px;margin:0 auto">
-    <h2 class="h rv" style="margin:0;font-size:clamp(34px,4.4vw,56px);line-height:1.08;font-weight:800">Do “oi” ao site no ar em 3 passos.</h2>
-    <div style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
-      <div class="rv" style="border-top:3px solid #22C55E;padding-top:24px">
-        <div class="h" style="font-size:64px;font-weight:800;color:#27272A;line-height:1">1</div>
-        <div class="h" style="margin-top:10px;font-size:24px;font-weight:700">Conversa rápida</div>
-        <p style="margin:8px 0 0;color:#A1A1AA">Você me conta do seu negócio pelo WhatsApp. Sem formulário, sem reunião longa.</p>
-      </div>
-      <div class="rv" style="border-top:3px solid #FACC15;padding-top:24px">
-        <div class="h" style="font-size:64px;font-weight:800;color:#27272A;line-height:1">2</div>
-        <div class="h" style="margin-top:10px;font-size:24px;font-weight:700">Prévia grátis</div>
-        <p style="margin:8px 0 0;color:#A1A1AA">Eu monto uma prévia de como fica o seu site. Você vê antes de pagar qualquer coisa.</p>
-      </div>
-      <div class="rv" style="border-top:3px solid #22C55E;padding-top:24px">
-        <div class="h" style="font-size:64px;font-weight:800;color:#27272A;line-height:1">3</div>
-        <div class="h" style="margin-top:10px;font-size:24px;font-weight:700">Ajustes e no ar</div>
-        <p style="margin:8px 0 0;color:#A1A1AA">Ajustamos juntos, eu publico e te ensino a usar. Seu negócio pronto para receber clientes.</p>
-      </div>
+<!-- COMO FUNCIONA: cartões que empilham -->
+<section style="padding:0 24px 130px">
+  <div style="max-width:980px;margin:0 auto">
+    <h2 class="h rv" style="margin:0 0 40px;font-size:clamp(36px,4.8vw,64px);line-height:1.02;font-weight:800;letter-spacing:-.04em">Do “oi” ao site no ar em 3 passos.</h2>
+    <div style="position:sticky;top:100px;background:#101012;border:1px solid #27272A;border-radius:30px;padding:clamp(26px,4vw,48px);min-height:260px;box-sizing:border-box;margin-bottom:28px;display:flex;gap:28px;flex-wrap:wrap;align-items:center;box-shadow:0 -20px 50px rgba(0,0,0,.5)">
+      <div class="h" style="font-size:clamp(90px,12vw,160px);font-weight:800;line-height:.8;color:#22C55E;letter-spacing:-.06em">1</div>
+      <div style="flex:1 1 300px;min-width:0"><div class="h" style="font-size:34px;font-weight:800;line-height:1.05">Conversa rápida</div><p style="margin:10px 0 0;color:#A1A1AA;font-size:19px">Você me conta do seu negócio pelo WhatsApp. Sem formulário, sem reunião longa.</p></div>
+    </div>
+    <div style="position:sticky;top:124px;background:#FACC15;color:#09090B;border-radius:30px;padding:clamp(26px,4vw,48px);min-height:260px;box-sizing:border-box;margin-bottom:28px;display:flex;gap:28px;flex-wrap:wrap;align-items:center;box-shadow:0 -20px 50px rgba(0,0,0,.5)">
+      <div class="h" style="font-size:clamp(90px,12vw,160px);font-weight:800;line-height:.8;letter-spacing:-.06em">2</div>
+      <div style="flex:1 1 300px;min-width:0"><div class="h" style="font-size:34px;font-weight:800;line-height:1.05">Prévia grátis</div><p style="margin:10px 0 0;font-size:19px;font-weight:500">Eu monto uma prévia de como fica o seu site. Você vê antes de pagar qualquer coisa.</p></div>
+    </div>
+    <div style="position:sticky;top:148px;background:#22C55E;color:#09090B;border-radius:30px;padding:clamp(26px,4vw,48px);min-height:260px;box-sizing:border-box;display:flex;gap:28px;flex-wrap:wrap;align-items:center;box-shadow:0 -20px 50px rgba(0,0,0,.5)">
+      <div class="h" style="font-size:clamp(90px,12vw,160px);font-weight:800;line-height:.8;letter-spacing:-.06em">3</div>
+      <div style="flex:1 1 300px;min-width:0"><div class="h" style="font-size:34px;font-weight:800;line-height:1.05">Ajustes e no ar</div><p style="margin:10px 0 0;font-size:19px;font-weight:500">Ajustamos juntos, eu publico e te ensino a usar. Em até 7 dias depois da prévia aprovada.</p></div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="duvidas" style="padding:40px 24px 120px">
-  <div style="max-width:820px;margin:0 auto">
-    <h2 class="h rv" style="margin:0;font-size:clamp(34px,4.4vw,52px);line-height:1.08;font-weight:800;text-align:center">Dúvidas frequentes</h2>
-    <div style="margin-top:40px;display:flex;flex-direction:column;gap:12px">
-      <details class="rv" style="background:#121214;border:1px solid #27272A;border-radius:16px;padding:20px 24px">
-        <summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;min-height:28px">Eu já tenho Instagram. Preciso mesmo de um site?<span class="plus" aria-hidden="true" style="color:#22C55E;font-size:24px;line-height:1">+</span></summary>
-        <p style="margin:12px 0 0;color:#A1A1AA">O Instagram mostra o seu dia a dia. O site é o que aparece quando alguém pesquisa no Google e é o lugar onde você controla tudo: preços, fotos, avaliações e o botão para falar com você.</p>
-      </details>
-      <details class="rv" style="background:#121214;border:1px solid #27272A;border-radius:16px;padding:20px 24px">
-        <summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;min-height:28px">Quanto tempo leva para o site ficar pronto?<span class="plus" aria-hidden="true" style="color:#22C55E;font-size:24px;line-height:1">+</span></summary>
-        <p style="margin:12px 0 0;color:#A1A1AA">Até 7 dias depois que você aprova a prévia. E a prévia sai antes de você pagar qualquer coisa.</p>
-      </details>
-      <details class="rv" style="background:#121214;border:1px solid #27272A;border-radius:16px;padding:20px 24px">
-        <summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;min-height:28px">Tem mensalidade?<span class="plus" aria-hidden="true" style="color:#22C55E;font-size:24px;line-height:1">+</span></summary>
-        <p style="margin:12px 0 0;color:#A1A1AA">Sim, uma mensalidade pequena que cobre hospedagem, o funcionamento do robô e os ajustes do dia a dia. Começa em R$ 49/mês no plano Presença. Se preferir não pagar a implantação, dá para fazer tudo por assinatura.</p>
-      </details>
-      <details class="rv" style="background:#121214;border:1px solid #27272A;border-radius:16px;padding:20px 24px">
-        <summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;min-height:28px">O robô vai falar coisa errada para o meu cliente?<span class="plus" aria-hidden="true" style="color:#22C55E;font-size:24px;line-height:1">+</span></summary>
-        <p style="margin:12px 0 0;color:#A1A1AA">Ele só responde com as informações que a gente cadastra juntos. Quando aparece algo que ele não sabe ou quando é hora de fechar, ele chama você.</p>
-      </details>
-      <details class="rv" style="background:#121214;border:1px solid #27272A;border-radius:16px;padding:20px 24px">
-        <summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;min-height:28px">Você atende negócios de qualquer cidade?<span class="plus" aria-hidden="true" style="color:#22C55E;font-size:24px;line-height:1">+</span></summary>
-        <p style="margin:12px 0 0;color:#A1A1AA">Sim. Tudo é feito online, então atendo negócios de qualquer cidade do Brasil.</p>
-      </details>
-    </div>
+<section id="duvidas" style="padding:0 24px 130px">
+  <div style="max-width:840px;margin:0 auto">
+    <h2 class="h rv" style="margin:0;font-size:clamp(36px,4.8vw,60px);line-height:1.02;font-weight:800;letter-spacing:-.04em;text-align:center">Dúvidas frequentes</h2>
+    <div style="margin-top:40px;display:flex;flex-direction:column;gap:12px"><details class="rv" style="background:#101012;border:1px solid #27272A;border-radius:18px;padding:22px 26px"><summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;min-height:28px">Eu já tenho Instagram. Preciso mesmo de um site?<span class="plus" aria-hidden="true" style="color:#22C55E;font-size:26px;line-height:1">+</span></summary><p style="margin:12px 0 0;color:#A1A1AA;line-height:1.6">O Instagram mostra o seu dia a dia. O site é o que aparece quando alguém pesquisa no Google e é o lugar onde você controla tudo: preços, fotos, avaliações e o botão para falar com você.</p></details><details class="rv" style="background:#101012;border:1px solid #27272A;border-radius:18px;padding:22px 26px"><summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;min-height:28px">Quanto tempo leva para o site ficar pronto?<span class="plus" aria-hidden="true" style="color:#22C55E;font-size:26px;line-height:1">+</span></summary><p style="margin:12px 0 0;color:#A1A1AA;line-height:1.6">Até 7 dias depois que você aprova a prévia. E a prévia sai antes de você pagar qualquer coisa.</p></details><details class="rv" style="background:#101012;border:1px solid #27272A;border-radius:18px;padding:22px 26px"><summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;min-height:28px">Tem mensalidade?<span class="plus" aria-hidden="true" style="color:#22C55E;font-size:26px;line-height:1">+</span></summary><p style="margin:12px 0 0;color:#A1A1AA;line-height:1.6">Sim, uma mensalidade pequena que cobre hospedagem, o funcionamento do robô e os ajustes do dia a dia. Começa em R$ 49/mês no plano Presença. Se preferir não pagar a implantação, dá para fazer tudo por assinatura.</p></details><details class="rv" style="background:#101012;border:1px solid #27272A;border-radius:18px;padding:22px 26px"><summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;min-height:28px">O robô vai falar coisa errada para o meu cliente?<span class="plus" aria-hidden="true" style="color:#22C55E;font-size:26px;line-height:1">+</span></summary><p style="margin:12px 0 0;color:#A1A1AA;line-height:1.6">Ele só responde com as informações que a gente cadastra juntos. Quando aparece algo que ele não sabe ou quando é hora de fechar, ele chama você.</p></details><details class="rv" style="background:#101012;border:1px solid #27272A;border-radius:18px;padding:22px 26px"><summary style="display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:18px;min-height:28px">Você atende negócios de qualquer cidade?<span class="plus" aria-hidden="true" style="color:#22C55E;font-size:26px;line-height:1">+</span></summary><p style="margin:12px 0 0;color:#A1A1AA;line-height:1.6">Sim. Tudo é feito online, então atendo negócios de qualquer cidade do Brasil.</p></details></div>
   </div>
 </section>
 
-<div class="rp-cortina" id="rodape">
-  <footer class="rp">
-    <div class="rp-aurora" aria-hidden="true"></div>
-    <div class="rp-grade" aria-hidden="true"></div>
-    <div class="rp-gigante" aria-hidden="true">ananda</div>
-
-    <div class="rp-faixa" aria-hidden="true"><div class="rp-faixa-trilho"><div class="rp-marq-item"><span>Sites que vendem</span><span class="estrela am" aria-hidden="true">✦</span><span>Robôs de WhatsApp com IA</span><span class="estrela vd" aria-hidden="true">✦</span><span>Tráfego pago</span><span class="estrela am" aria-hidden="true">✦</span><span>Máquina de Clientes</span><span class="estrela vd" aria-hidden="true">✦</span></div><div class="rp-marq-item"><span>Sites que vendem</span><span class="estrela am" aria-hidden="true">✦</span><span>Robôs de WhatsApp com IA</span><span class="estrela vd" aria-hidden="true">✦</span><span>Tráfego pago</span><span class="estrela am" aria-hidden="true">✦</span><span>Máquina de Clientes</span><span class="estrela vd" aria-hidden="true">✦</span></div></div></div>
-
-    <div class="rp-centro">
-      <h2 class="h rp-titulo">Pronto pra vender mais?</h2>
-      <div class="rp-links">
-        <div class="rp-linha">
-          <a class="rp-pill rp-grande rp-wa mag" href="#contato" data-wa="Oi, Ananda! Vim pelo site e quero saber mais."><svg aria-hidden="true" width="22" height="22" viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 3C8.86 3 3.02 8.82 3.02 15.98c0 2.29.6 4.52 1.74 6.49L3 29l6.7-1.75a13.02 13.02 0 0 0 6.34 1.62h.01c7.18 0 13.02-5.83 13.02-12.99C29.07 8.82 23.22 3 16.04 3zm0 23.68h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.23-3.97 1.04 1.06-3.86-.26-.4a10.75 10.75 0 0 1-1.65-5.75c0-5.95 4.85-10.79 10.82-10.79 2.89 0 5.6 1.12 7.64 3.17a10.7 10.7 0 0 1 3.17 7.63c0 5.95-4.86 10.79-10.9 10.79zm5.93-8.08c-.32-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.16-.22.32-.84 1.06-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.32-.02-.5.14-.66.14-.14.33-.38.49-.57.16-.19.22-.32.32-.54.11-.21.06-.4-.02-.56-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.4-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.21 2.3 3.5 5.56 4.91.78.33 1.39.53 1.86.68.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.41.19-1.55-.08-.13-.29-.21-.62-.37z"/></svg><span>WhatsApp <b>(73) 3679-1767</b></span></a>
-          <a class="rp-pill rp-grande mag" href="https://www.instagram.com/torquato.ananda/" target="_blank" rel="noopener"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg><span>@torquato.ananda</span></a>
-        </div>
-        <nav class="rp-linha rp-sec" aria-label="Rodapé">
-          <a class="rp-pill rp-peq mag" href="#projetos">Projetos</a>
-          <a class="rp-pill rp-peq mag" href="#robo">Robô de WhatsApp</a>
-          <a class="rp-pill rp-peq mag" href="#pacotes">Pacotes</a>
-          <a class="rp-pill rp-peq mag" href="#duvidas">Dúvidas</a>
-        </nav>
-      </div>
+<!-- RODAPÉ -->
+<footer style="position:relative;overflow:hidden;background:#050506;border-top:1px solid #1C1C1F;min-height:760px;display:flex;flex-direction:column;justify-content:space-between">
+  <div aria-hidden="true" style="position:absolute;left:50%;top:50%;width:80%;height:420px;border-radius:50%;filter:blur(90px);background:radial-gradient(circle at 50% 50%,rgba(34,197,94,.18) 0%,rgba(250,204,21,.12) 40%,transparent 70%);animation:respira 8s ease-in-out infinite alternate;pointer-events:none" class="loop"></div>
+  <div class="h" aria-hidden="true" style="position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);font-weight:800;font-size:30vw;line-height:.75;letter-spacing:-.06em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(250,250,250,.07);pointer-events:none">ananda</div>
+  <div aria-hidden="true" style="position:relative;margin-top:48px;margin-left:-5%;width:110%;overflow:hidden;transform:rotate(-2deg);border-top:1px solid rgba(250,250,250,.1);border-bottom:1px solid rgba(250,250,250,.1);background:rgba(9,9,11,.6);padding:16px 0">
+    <div class="mq m" style="display:flex;width:max-content;gap:40px;font-size:14px;font-weight:700;color:#A1A1AA;white-space:nowrap;letter-spacing:.28em"><span>Sites que vendem</span><span style="color:#FACC15">✦</span><span>Robôs de WhatsApp com IA</span><span style="color:#22C55E">✦</span><span>Tráfego pago</span><span style="color:#FACC15">✦</span><span>Máquina de Clientes</span><span style="color:#22C55E">✦</span><span>Sites que vendem</span><span style="color:#FACC15">✦</span><span>Robôs de WhatsApp com IA</span><span style="color:#22C55E">✦</span><span>Tráfego pago</span><span style="color:#FACC15">✦</span><span>Máquina de Clientes</span><span style="color:#22C55E">✦</span><span>Sites que vendem</span><span style="color:#FACC15">✦</span><span>Robôs de WhatsApp com IA</span><span style="color:#22C55E">✦</span><span>Tráfego pago</span><span style="color:#FACC15">✦</span><span>Máquina de Clientes</span><span style="color:#22C55E">✦</span><span>Sites que vendem</span><span style="color:#FACC15">✦</span><span>Robôs de WhatsApp com IA</span><span style="color:#22C55E">✦</span><span>Tráfego pago</span><span style="color:#FACC15">✦</span><span>Máquina de Clientes</span><span style="color:#22C55E">✦</span></div>
+  </div>
+  <div style="position:relative;display:flex;flex-direction:column;align-items:center;padding:70px 24px 60px">
+    <h2 class="h rv" style="margin:0 0 40px;text-align:center;font-weight:800;font-size:clamp(46px,8vw,104px);line-height:.95;letter-spacing:-.045em">Pronto pra vender mais?</h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px">
+      <a class="pill" href="https://wa.me/557336791767?text=Oi%2C%20Ananda%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais." style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#FAFAFA;border-radius:999px;background:rgba(250,250,250,.05);border:1px solid rgba(34,197,94,.5);padding:18px 30px;font-weight:600;font-size:17px"><span style="color:#22C55E;display:flex"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 3C8.86 3 3.02 8.82 3.02 15.98c0 2.29.6 4.52 1.74 6.49L3 29l6.7-1.75a13.02 13.02 0 0 0 6.34 1.62h.01c7.18 0 13.02-5.83 13.02-12.99C29.07 8.82 23.22 3 16.04 3zm0 23.68h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.23-3.97 1.04 1.06-3.86-.26-.4a10.75 10.75 0 0 1-1.65-5.75c0-5.95 4.85-10.79 10.82-10.79 2.89 0 5.6 1.12 7.64 3.17a10.7 10.7 0 0 1 3.17 7.63c0 5.95-4.86 10.79-10.9 10.79zm5.93-8.08c-.32-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.16-.22.32-.84 1.06-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.32-.02-.5.14-.66.14-.14.33-.38.49-.57.16-.19.22-.32.32-.54.11-.21.06-.4-.02-.56-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.4-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.21 2.3 3.5 5.56 4.91.78.33 1.39.53 1.86.68.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.41.19-1.55-.08-.13-.29-.21-.62-.37z"></path></svg></span><span>WhatsApp <b style="color:#FACC15">(73) 3679-1767</b></span></a>
+      <a class="pill" href="https://www.instagram.com/torquato.ananda/" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:#FAFAFA;border-radius:999px;background:rgba(250,250,250,.05);border:1px solid rgba(250,250,250,.12);padding:18px 30px;font-weight:600;font-size:17px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg><span>@torquato.ananda</span></a>
     </div>
+  </div>
+  <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 48px 32px;flex-wrap:wrap">
+    <div class="m" style="font-size:12px;font-weight:600;color:#8A8A93">© 2026 Ananda Torquato · CNPJ 68.993.367/0001-97</div>
+    <a class="pill" href="#topo" aria-label="Voltar ao topo" style="width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:#A1A1AA;background:rgba(250,250,250,.05);border:1px solid rgba(250,250,250,.12)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg></a>
+  </div>
+</footer>
 
-    <div class="rp-base">
-      <div class="rp-copy">© 2026 Ananda Torquato · CNPJ 68.993.367/0001-97</div>
-      <button type="button" class="rp-pill rp-topo mag" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg></button>
-    </div>
-  </footer>
-</div>
-
-</div>
-
-<a class="wa-float" href="#contato" data-wa="Oi, Ananda! Vim pelo site e quero saber mais." aria-label="Falar com a Ananda no WhatsApp">
-  <span class="rotulo">Fale comigo no WhatsApp</span>
-  <span class="bolha" style="position:relative"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 32 32" fill="#FFFFFF"><path d="M16.04 3C8.86 3 3.02 8.82 3.02 15.98c0 2.29.6 4.52 1.74 6.49L3 29l6.7-1.75a13.02 13.02 0 0 0 6.34 1.62h.01c7.18 0 13.02-5.83 13.02-12.99C29.07 8.82 23.22 3 16.04 3zm0 23.68h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.23-3.97 1.04 1.06-3.86-.26-.4a10.75 10.75 0 0 1-1.65-5.75c0-5.95 4.85-10.79 10.82-10.79 2.89 0 5.6 1.12 7.64 3.17a10.7 10.7 0 0 1 3.17 7.63c0 5.95-4.86 10.79-10.9 10.79zm5.93-8.08c-.32-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.16-.22.32-.84 1.06-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.32-.02-.5.14-.66.14-.14.33-.38.49-.57.16-.19.22-.32.32-.54.11-.21.06-.4-.02-.56-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.4-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.21 2.3 3.5 5.56 4.91.78.33 1.39.53 1.86.68.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.41.19-1.55-.08-.13-.29-.21-.62-.37z"/></svg></span>
+<!-- WhatsApp flutuante -->
+<a href="https://wa.me/557336791767?text=Oi%2C%20Ananda%21%20Vim%20pelo%20site%20e%20quero%20saber%20mais." aria-label="Falar com a Ananda no WhatsApp" style="position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:10px;text-decoration:none">
+  <span class="wa-rot" style="background:#FAFAFA;color:#09090B;font-weight:600;font-size:14px;padding:9px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);white-space:nowrap">Fale comigo no WhatsApp</span>
+  <span class="live" style="width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;color:#FFFFFF"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 3C8.86 3 3.02 8.82 3.02 15.98c0 2.29.6 4.52 1.74 6.49L3 29l6.7-1.75a13.02 13.02 0 0 0 6.34 1.62h.01c7.18 0 13.02-5.83 13.02-12.99C29.07 8.82 23.22 3 16.04 3zm0 23.68h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.23-3.97 1.04 1.06-3.86-.26-.4a10.75 10.75 0 0 1-1.65-5.75c0-5.95 4.85-10.79 10.82-10.79 2.89 0 5.6 1.12 7.64 3.17a10.7 10.7 0 0 1 3.17 7.63c0 5.95-4.86 10.79-10.9 10.79zm5.93-8.08c-.32-.16-1.93-.95-2.23-1.06-.3-.11-.52-.16-.73.16-.22.32-.84 1.06-1.03 1.27-.19.22-.38.24-.7.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.62-1.93-1.81-2.25-.19-.32-.02-.5.14-.66.14-.14.33-.38.49-.57.16-.19.22-.32.32-.54.11-.21.06-.4-.02-.56-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.4-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.21 2.3 3.5 5.56 4.91.78.33 1.39.53 1.86.68.78.25 1.49.21 2.05.13.63-.09 1.93-.79 2.2-1.55.27-.76.27-1.41.19-1.55-.08-.13-.29-.21-.62-.37z"></path></svg></span>
 </a>
+
+</div>
+
 <script>
-// ====== CONFIGURAÇÃO: coloque aqui o número do WhatsApp (só dígitos: 55 + DDD + número) ======
-const WHATSAPP = "557336791767";
-// =============================================================================================
-const INSTAGRAM_DM = "https://ig.me/m/torquato.ananda";
-document.querySelectorAll('[data-wa]').forEach(a => {
-  a.href = WHATSAPP ? "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.wa) : INSTAGRAM_DM;
-  a.target = "_blank"; a.rel = "noopener";
+var ON="background:#FACC15;color:#09090B", OFF="background:transparent;color:#A1A1AA";
+document.querySelectorAll('.tabc[data-tab]').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.querySelectorAll('.tabc[data-tab]').forEach(function(x){
+      var on = x === b;
+      x.setAttribute('aria-selected', on);
+      x.style.cssText = x.style.cssText.replace(on ? OFF : ON, on ? ON : OFF);
+    });
+    document.querySelectorAll('[data-panel]').forEach(function(p){ p.hidden = p.dataset.panel !== b.dataset.tab; });
+  });
 });
-// rodapé: botões magnéticos (só com mouse) e esconder o botão flutuante quando o rodapé aparece
-if (window.matchMedia('(pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  document.querySelectorAll('.mag').forEach(el => {
-    el.addEventListener('mousemove', e => {
-      const r = el.getBoundingClientRect();
-      const x = e.clientX - r.left - r.width / 2, y = e.clientY - r.top - r.height / 2;
-      el.style.transition = 'transform .4s cubic-bezier(.2,.8,.2,1)';
-      el.style.transform = `translate(${x * .35}px, ${y * .35}px) scale(1.05)`;
-    });
-    el.addEventListener('mouseleave', () => {
-      el.style.transition = 'transform 1.1s cubic-bezier(.34,1.56,.64,1)';
-      el.style.transform = '';
-    });
-  });
-}
-new IntersectionObserver(([e]) => document.body.classList.toggle('rp-visivel', e.intersectionRatio > .35), { threshold: [0, .35, 1] }).observe(document.getElementById('rodape'));
-// abas do protótipo do Varandas do Sol
-const ON = "background:#FEF3C7;color:#92400E;font-weight:700", OFF = "background:transparent;color:#374151;font-weight:500";
-document.querySelectorAll('.tab[data-tab]').forEach(b => b.addEventListener('click', () => {
-  document.querySelectorAll('.tab[data-tab]').forEach(x => {
-    const on = x === b; x.setAttribute('aria-selected', on);
-    x.style.cssText = x.style.cssText.replace(on ? OFF : ON, on ? ON : OFF);
-  });
-  document.querySelectorAll('[data-panel]').forEach(p => p.hidden = p.dataset.panel !== b.dataset.tab);
-}));
 </script>
 </body>
 </html>
