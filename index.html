@@ -74,8 +74,7 @@ details[open] .plus{transform:rotate(45deg)}
 .wa-float:hover .bolha{transform:scale(1.07)}
 .wa-float .rotulo{background:#FAFAFA;color:#09090B;font:600 14px Inter,system-ui,sans-serif;padding:9px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);white-space:nowrap}
 .wa-float .bolha::after{content:"";position:absolute;width:60px;height:60px;border-radius:50%;animation:pulse 2s infinite}
-#contato a.btn{justify-content:center;max-width:100%;box-sizing:border-box}
-@media (max-width:720px){.wa-float .rotulo{display:none}#contato a.btn{font-size:17px !important;padding:18px 22px !important;white-space:nowrap}}
+@media (max-width:720px){.wa-float .rotulo{display:none}}
 @media (prefers-reduced-motion: reduce){.wa-float .bolha::after{animation:none}}
 
 /* ===== rodapé cinematográfico ===== */
@@ -151,7 +150,7 @@ body.rp-visivel .wa-float{opacity:0;pointer-events:none;transform:translateY(20p
       <a href="#pacotes" style="color:#A1A1AA;text-decoration:none">Pacotes</a>
       <a href="#duvidas" style="color:#A1A1AA;text-decoration:none">Dúvidas</a>
     </nav>
-    <a href="#contato" class="btn btn-y" style="background:#FACC15;color:#09090B;text-decoration:none;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center">Pedir prévia grátis</a>
+    <a href="#contato" data-wa="Oi, Ananda! Quero a prévia grátis do site do meu negócio." class="btn btn-y" style="background:#FACC15;color:#09090B;text-decoration:none;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center">Pedir prévia grátis</a>
   </div>
 </header>
 
@@ -170,7 +169,7 @@ body.rp-visivel .wa-float{opacity:0;pointer-events:none;transform:translateY(20p
         Eu crio o site profissional do seu negócio e um robô que atende seus clientes no WhatsApp na hora: tira dúvidas, passa preço e te chama quando a venda está pronta para fechar.
       </p>
       <div class="up" style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;animation-delay:.4s">
-        <a href="#contato" class="btn btn-y" style="background:#FACC15;color:#09090B;text-decoration:none;font-weight:700;font-size:17px;padding:18px 28px;border-radius:14px;display:inline-flex;align-items:center;gap:10px">
+        <a href="#contato" data-wa="Oi, Ananda! Quero a prévia grátis do site do meu negócio." class="btn btn-y" style="background:#FACC15;color:#09090B;text-decoration:none;font-weight:700;font-size:17px;padding:18px 28px;border-radius:14px;display:inline-flex;align-items:center;gap:10px">
           Quero a prévia grátis do meu site
           <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
         </a>
@@ -780,18 +779,6 @@ Check-in a partir das 14h.</div>
         <p style="margin:12px 0 0;color:#A1A1AA">Não. Tudo é feito online, então atendo negócios de qualquer cidade do Brasil.</p>
       </details>
     </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section id="contato" style="padding:0 24px 100px">
-  <div class="zoom" style="max-width:1200px;margin:0 auto;background:#22C55E;color:#09090B;border-radius:32px;padding:clamp(36px,6vw,88px);text-align:center;position:relative;overflow:hidden">
-    <h2 class="h" style="margin:0 auto;font-size:clamp(38px,5.6vw,76px);line-height:1;font-weight:800;max-width:900px">Veja o site do seu negócio antes de pagar.</h2>
-    <p style="margin:22px auto 0;font-size:20px;max-width:620px;color:#052E16">Me chama no WhatsApp com o nome do seu negócio. Eu te mando uma prévia grátis, sem compromisso.</p>
-    <a href="#contato" data-wa="Oi, Ananda! Quero a prévia grátis do site do meu negócio." class="btn" style="margin-top:36px;display:inline-flex;align-items:center;gap:12px;background:#09090B;color:#FACC15;text-decoration:none;font-weight:700;font-size:19px;padding:20px 34px;border-radius:16px">
-      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-12.6 7.3L3 21l2.2-5.2A8.4 8.4 0 1121 11.5z"></path></svg>
-      Quero minha prévia grátis
-    </a>
   </div>
 </section>
 
